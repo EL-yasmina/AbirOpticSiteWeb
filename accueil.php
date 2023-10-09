@@ -24,28 +24,52 @@
 
     <header class="header">
 
-        <a href="accueil.html" class="logo"> Abir Optic </a>
+        <a href="accueil.php" class="logo"> Abir Optic </a>
 
         <nav class="navbar">
             <ul>
-                <li><a href="accueil.html " class="selected-menu">accueil</a></li>
-                <li><a href="products.html">produits</a></li>
-                <li><a href="qui-sommes-nous.html">Qui sommes-nous</a></li>
+                <li><a href="accueil.php" class="selected-menu">accueil</a></li>
+                <li><a href="products.php">produits</a></li>
+                <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
+                <li><a href="contact.php">contact</a></li>
+                <li>
+                    <a href="#" id="user-menu">
+                        <?php
+                        // Démarrer la session (si elle n'est pas déjà démarrée)
+                        session_start();
 
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="#">Compte +</a>
+                        // Vérifier si l'utilisateur est authentifié
+                        if (isset($_SESSION['nom'])) {
+                            // L'utilisateur est connecté, afficher son nom
+                            echo $_SESSION['nom'];
+                        } else {
+                            // L'utilisateur n'est pas connecté, afficher "Compte +"
+                            echo 'Compte +';
+                        }
+                        ?>
+                    </a>
                     <ul>
-                        <li><a href="login.html">se connecter</a></li>
-                        <li><a href="register.html">s'inscrire</a></li>
+                        <?php
+                        // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
+                        if (!isset($_SESSION['nom'])) {
+                            echo '<li><a href="login.php">se connecter</a></li>';
+                            echo '<li><a href="register.php">s\'inscrire</a></li>';
+                        }
+                        else {
+                            echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
+                        }
+                        ?>
                     </ul>
                 </li>
             </ul>
         </nav>
 
+        
+
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="cart.html" class="fas fa-shopping-cart"></a>
+            <a href="cart.php" class="fas fa-shopping-cart"></a>
         </div>
 
         <form action="" class="search-form">
@@ -66,7 +90,7 @@
                 style="padding: 30px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size: large;">
                 <h1>BIENVENUE CHEZ ABIR OPTIC</h1>
                 <h2>Votre vision, Notre passion!</h2>
-                <a href="products.html" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -75,7 +99,7 @@
                 style="padding: 30px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: large; ">
                 <h1>CHEZ ABIR OPTIC</h1>
                 <h2>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
-                <a href="products.html" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -85,7 +109,7 @@
                 <h1>ABIR OPTIC</h1>
                 <h2>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
                 </h2>
-                <a href="products.html" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -105,7 +129,7 @@
             <div class="solde">Solde 50%</div>
             <img src="images/lunettes3.jpg" alt="">
             <div class="content">
-                <a href="products.html" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
+                <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
             </div>
         </div>
 
@@ -113,7 +137,7 @@
             <div class="solde">Solde 50%</div>
             <img src="images/lunettes10.jpg" alt="">
             <div class="content">
-                <a href="products.html" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
+                <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
             </div>
         </div>
 
@@ -121,7 +145,7 @@
             <div class="solde">Solde 50%</div>
             <img src="images/lunettes6.jpg" alt="">
             <div class="content">
-                <a href="products.html" class="btn acheter-maintenant margin-top-80 ">Acheter maintenant</a>
+                <a href="products.php" class="btn acheter-maintenant margin-top-80 ">Acheter maintenant</a>
             </div>
         </div>
 
@@ -172,8 +196,8 @@
         <div class="credit">
             <div>
                 <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-                <a href="mentions-legales.html">Mentions légales</a><br />
-                <a href="politique-de-confidentialite.html">Politique de confidentialité</a><br />
+                <a href="mentions-legales.php">Mentions légales</a><br />
+                <a href="politique-de-confidentialite.php">Politique de confidentialité</a><br />
             </div>
 
             <h3>Suivez-nous</h3>
