@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>mentions légales</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -65,14 +65,11 @@
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
+        
         <a href="cart.php" class="fas fa-shopping-cart"></a>
     </div>
 
-    <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
+   
 
 </header>
 
@@ -118,7 +115,7 @@
         <div>
             <p>&copy; 2023 Abir optic - Tout droit réservés</p>
             <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="politique-de-confidentialite.php">Politique de confidentialité</a><br />
+            <a href="cgv.php">Politique de confidentialité</a><br />
         </div>
 
         <h3>Suivez-nous</h3>

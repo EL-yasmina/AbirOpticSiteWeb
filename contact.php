@@ -70,14 +70,11 @@
 
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
-            <div id="search-btn" class="fas fa-search"></div>
+            
             <a href="cart.php" class="fas fa-shopping-cart"></a>
         </div>
 
-        <form action="" class="search-form">
-            <input type="search" name="" placeholder="search here..." id="search-box">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
+       
 
     </header>
 
@@ -173,7 +170,7 @@
             <div>
                 <p>&copy; 2023 Abir optic - Tout droit réservés</p>
                 <a href="mentions-legales.php">Mentions légales</a><br />
-                <a href="politique-de-confidentialite.php">Politique de confidentialité</a><br />
+                <a href="cgv.php">Politique de confidentialité</a><br />
             </div>
 
             <h3>Suivez-nous</h3>

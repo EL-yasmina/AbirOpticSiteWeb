@@ -137,7 +137,7 @@
         <div>
             <p>&copy; 2023 Abir optic - Tout droit réservés</p>
             <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="politique-de-confidentialite.php">Politique de confidentialité</a><br />
+            <a href="cgv.php">Politique de confidentialité</a><br />
         </div>
 
         <h3>Suivez-nous</h3>
