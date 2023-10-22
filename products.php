@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,27 +17,27 @@
     <script src="js/script.js" defer></script>
 
 </head>
+
 <body>
+<?php
+    include('fonctions-php/session.php');
+    include('fonctions-php/ajouter-panier.php');
+    include('fonctions-php/navbar.php');
+?>
+    <header class="header">
 
-<!-- header section starts  -->
+        <a href="accueil.php" class="logo"> Abir Optic </a>
 
-<header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="accueil.php">accueil</a></li>
+                <li><a href="products.php" class="selected-menu">Produits</a></li>
+                <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
 
-    <a href="accueil.php" class="logo"> Abir Optic </a>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="accueil.php">accueil</a></li>
-            <li><a href="products.php"class="selected-menu" >Produits</a></li>
-            <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
-               
-            <li><a href="contact.php">contact</a></li>
-            <li>
+                <li><a href="contact.php">contact</a></li>
+                <li>
                     <a href="#" id="user-menu">
                         <?php
-                        // Démarrer la session (si elle n'est pas déjà démarrée)
-                        session_start();
-
                         // Vérifier si l'utilisateur est authentifié
                         if (isset($_SESSION['nom'])) {
                             // L'utilisateur est connecté, afficher son nom
@@ -60,276 +61,136 @@
                         ?>
                     </ul>
                 </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        
-        <a href="cart.php" class="fas fa-shopping-cart"></a>
-    </div>
-
-    
-
-</header>
-
-<!-- header section ends -->
-
-<!-- header section  -->
-
-<section class="heading">
-    <h1>Nos produits</h1>
-    <p> <a href="accueil.php">accueil</a> >> produits </p>
-</section>
-
-<!-- header section -->
-
-<!-- prodcuts section starts  -->
-
-<section class="products">
-
-    
-    <div class="box-container">
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                    
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/24.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh <span>250.00 dh</span></div>
-            </div>
+        <div class="icons">
+            <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                   
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-2.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh <span>250.00 dh</span></div>
-            </div>
+
+
+    </header>
+
+    <section class="heading">
+        <h1>Nos produits</h1>
+        <p> <a href="accueil.php">accueil</a> >> produits </p>
+    </section>
+
+    <section class="products">
+        <div class="box-container">
+            <?php
+                $conn = mysqli_connect("localhost","root","","abiroptic");
+
+                // Vérification de la connexion
+                if ($conn->connect_error) {
+                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+                }
+
+                // Requête SQL pour sélectionner tous les produits
+                $sql = "SELECT * FROM produit";
+
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $imageData = $row['image'];
+                        $imageBase64 = base64_encode($imageData);
+
+                        $html =  
+                        '<div class="box">
+                            <div class="image">
+                                <div class="icons">
+                                    <a href="?ajouterAuPanier=' .$row['id']. '" class="fas fa-shopping-cart"></a>
+                                    <a href="#" class="fas fa-eye"></a>
+                                </div>
+                                <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $row['nom'] . '">
+                            </div>
+                            <div class="content">
+                                <h3>' . $row['nom'] . '</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>';
+                        
+                        if ($row['solde'] > 0) {
+                            $html .= '<div class="price">' . $row['solde'] . ' dh <span>' . $row['prix'] . ' dh</span></div>';
+                        } else {
+                            $html .= '<div class="price">' . $row['prix'] . ' dh </div>';
+                        }
+                        
+                        $html .= '</div> 
+                        </div>';
+
+
+                        echo $html;
+
+                        
+
+                    }
+                } else {
+                    echo "Aucun produit trouvé dans la base de données.";
+                }
+
+                // Fermer la connexion à la base de données
+                $conn->close();
+            ?>
+
         </div>
 
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                   
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-3.jpg" alt="">
+    </section>
+
+    <!-- prodcuts section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="credit">
+            <div>
+                <p>&copy; 2023 Abir optic - Tout droit réservés</p>
+                <a href="mentions-legales.php">Mentions légales</a><br />
+                <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
             </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
+
+            <h3>Suivez-nous</h3>
+            <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <i class="fab fa-facebook-f"></i> facebook
+            </a>
+
+            <a href="https://www.instagram.com/abiroptic/"> <i class="fab fa-instagram"></i> instagram </a>
+
         </div>
+    </section>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/yasminataif99/30min',
+            text: 'Prendre un rendez-vous avec nous',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+        });
+    }
+    </script>
 
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                    
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-4.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                    
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-5.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                    
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-6.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                   
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-7.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                   
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-8.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <div class="icons">
-                    <a href="cart.php" class="fas fa-shopping-cart"></a>
-                   
-                    <a href="#" class="fas fa-eye"></a>
-                </div>                
-                <img src="images/product-9.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>premium glasses</h3>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <div class="price">200.00 dh<span>250.00 dh</span></div>
-            </div>
-        </div>
-
-    </div>
-    
-</section>
-
-<!-- prodcuts section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="credit">
-        <div>
-            <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-            <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="cgv.php">Politique de confidentialité</a><br />
-        </div>
-
-        <h3>Suivez-nous</h3>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <i class="fab fa-facebook-f"></i> facebook </a>
-
-        <a href="https://www.instagram.com/abiroptic/"> <i class="fab fa-instagram"></i> instagram </a>
-
-    </div>
-</section>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script
-    type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
-
-<!-- footer section ends -->
+    <!-- footer section ends -->
 
 </body>
+
 </html>

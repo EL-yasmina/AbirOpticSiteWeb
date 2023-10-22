@@ -1,9 +1,4 @@
 <?php
-// Connexion à la base de données
-$host = "localhost"; // Adresse du serveur MySQL
-$user = "votre_utilisateur"; // Nom d'utilisateur MySQL
-$pass = "votre_mot_de_passe"; // Mot de passe MySQL
-$db = "votre_base_de_donnees"; // Nom de la base de données MySQL
 
 $conn = mysqli_connect("localhost","root","","abiroptic");
 

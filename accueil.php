@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
 
-    
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
@@ -20,7 +19,11 @@
 </head>
 
 <body>
-
+<?php
+    include('fonctions-php/session.php');
+    include('fonctions-php/navbar.php');
+    
+?>
     <!-- header section starts  -->
 
     <header class="header">
@@ -36,9 +39,6 @@
                 <li>
                     <a href="#" id="user-menu">
                         <?php
-                        // Démarrer la session (si elle n'est pas déjà démarrée)
-                        session_start();
-
                         // Vérifier si l'utilisateur est authentifié
                         if (isset($_SESSION['nom'])) {
                             // L'utilisateur est connecté, afficher son nom
@@ -70,7 +70,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             
-            <a href="cart.php" class="fas fa-shopping-cart"></a>
+            <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
         
@@ -195,7 +195,7 @@
             <div>
                 <p>&copy; 2023 Abir optic - Tout droit réservés</p>
                 <a href="mentions-legales.php">Mentions légales</a><br />
-                <a href="cgv.php">Politique de confidentialité</a><br />
+                <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
             </div>
 
             <h3>Suivez-nous</h3>
