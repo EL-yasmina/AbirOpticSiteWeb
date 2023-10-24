@@ -90,8 +90,16 @@ section {
           align-items: center;
   padding: 0 9%;
 }
+.header .logo {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bolder;
+  margin-right: auto;
+}
 
-
+.img-logo {
+  margin-top: 8px; width: 128px;height: 45px;
+}
 
 .header .navbar ul {
   list-style: none;

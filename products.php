@@ -27,7 +27,7 @@
     <header class="header">
 
         <a href="accueil.php" class="logo">
-            <img src="images/logo.png" alt="abiroptic" height="45px" width="75px" >
+            <img src="images/logo.png" alt="abiroptic" class="img-logo" >
         </a>
 
 
