@@ -25,9 +25,10 @@
 
 <header class="header">
 
-    <a href="accueil.php" class="logo"> Abir Optic </a>
+        <a href="accueil.php" class="logo">
+            <img src="images/logo.png" alt="abiroptic" height="45px" width="75px" >
+        </a>
 
-    <nav class="navbar">
         <ul>
             <li><a href="accueil.php">accueil</a></li>
             <li><a href="products.php">produits</a></li>
