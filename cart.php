@@ -29,6 +29,7 @@
             <img src="images/logo.png" alt="abiroptic" class="img-logo" >
         </a>
 
+        <nav class="navbar">
         <ul>
             <li><a href="accueil.php">accueil</a></li>
             <li><a href="products.php">produits</a></li>
@@ -92,71 +93,8 @@
     <h1 class="title"> vos produits </h1>
 
     <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/cart-item-1.png" alt="">
-            <div class="content">
-                <h3>premium glasses</h3>
-                <form action="">
-                    <span>quantity :</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price"> $20.00 <span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/cart-item-2.png" alt="">
-            <div class="content">
-                <h3>premium glasses</h3>
-                <form action="">
-                    <span>quantity :</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price"> $20.00 <span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/cart-item-3.png" alt="">
-            <div class="content">
-                <h3>premium glasses</h3>
-                <form action="">
-                    <span>quantity :</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price"> $20.00 <span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/cart-item-4.png" alt="">
-            <div class="content">
-                <h3>premium glasses</h3>
-                <form action="">
-                    <span>quantity :</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price"> $20.00 <span>$25.00</span> </div>
-            </div>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-times"></i>
-            <img src="images/cart-item-5.png" alt="">
-            <div class="content">
-                <h3>premium glasses</h3>
-                <form action="">
-                    <span>quantity :</span>
-                    <input type="number" name="" value="1" id="">
-                </form>
-                <div class="price"> $20.00 <span>$25.00</span> </div>
-            </div>
-        </div>
+        
+    <?php include('fonctions-php/list-produits-panier.php'); ?>
 
     </div>
 
