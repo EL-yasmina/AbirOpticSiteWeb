@@ -82,12 +82,13 @@
     <!-- header section ends -->
 
     <!-- home section starts      -->
+    
 
     <section class="accueil">
 
-        <div class="slide active" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat;">
+        <div class="slide active" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
             <div class="content"
-                style="padding: 30px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size: large;">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size:1.5em; border-radius:7px; border-style:double;">
                 <h1>BIENVENUE CHEZ ABIR OPTIC</h1>
                 <h2>Votre vision, Notre passion!</h2>
                 <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
@@ -96,16 +97,16 @@
 
         <div class="slide" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
             <div class="content"
-                style="padding: 30px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: large; ">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px; border-style:double;">
                 <h1>CHEZ ABIR OPTIC</h1>
                 <h2>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
                 <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
-        <div class="slide" style="background: url(images/TASSE-LUNETTE.jpg) no-repeat;">
+        <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; " >
             <div class="content"
-                style="padding: 30px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: large;">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px;border-style:double;">
                 <h1>ABIR OPTIC</h1>
                 <h2>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
                 </h2>
@@ -127,7 +128,7 @@
     <section class="banner">
         <div class="box">
             <div class="solde">Solde 50%</div>
-            <img src="images/lunettes3.jpg" alt="">
+            <img src="images/solaire4.png" alt="">
             <div class="content">
                 <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
             </div>
@@ -143,7 +144,7 @@
 
         <div class="box">
             <div class="solde">Solde 50%</div>
-            <img src="images/lunettes6.jpg" alt="">
+            <img src="images/solaire3.png" alt="">
             <div class="content">
                 <a href="products.php" class="btn acheter-maintenant margin-top-80 ">Acheter maintenant</a>
             </div>
@@ -159,6 +160,8 @@
             <div class="icons">
                 <img src="images/icon-1.png" alt="">
                 <h3>Examen de la vue professionnelle</h3>
+             
+                
             </div>
 
 
@@ -187,7 +190,9 @@
 
 
         </div>
+      
     </section>
+   
 
 
 
@@ -200,11 +205,11 @@
                 <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
             </div>
 
-            <h3>Suivez-nous</h3>
-            <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <i class="fab fa-facebook-f"></i> facebook
+            <h4>Suivez-nous</h4>
+            <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px">
             </a>
 
-            <a href="https://www.instagram.com/abiroptic/"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://www.instagram.com/abiroptic/"> <img src="images/instagram.png" alt="instagram" height="30px" width="30px"> </a>
 
         </div>
     </section>

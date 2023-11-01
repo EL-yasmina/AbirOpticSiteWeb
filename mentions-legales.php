@@ -142,10 +142,10 @@
             <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
         </div>
 
-        <h3>Suivez-nous</h3>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <i class="fab fa-facebook-f"></i> facebook </a>
+        <h4>Suivez-nous</h4>
+        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px"></a>
 
-        <a href="https://www.instagram.com/abiroptic/"> <i class="fab fa-instagram"></i> instagram </a>
+        <a href="https://www.instagram.com/abiroptic/"><img src="images/instagram.png" alt="instagram" height="30px" width="30px"></a>
 
     </div>
 </section>

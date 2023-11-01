@@ -898,8 +898,8 @@ section {
   z-index: 1000;
 }
 .acheter-maintenant{
-  background-color: red;
-  color: white(246, 245, 248);
+  background-color: #E63946;
+  color:white;
   border-color: rgb(231, 52, 52);
   opacity: 0.9;
 }
@@ -958,3 +958,4 @@ div.desc {
   font-size: 18px !important;
   font-weight:bold;
 }
+
