@@ -56,7 +56,7 @@
                         // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
                         if (!isset($_SESSION['nom'])) {
                             echo '<li><a href="login.php">se connecter</a></li>';
-                            echo '<li><a href="register.php">s\'inscrire</a></li>';
+                            echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
                             echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
@@ -72,7 +72,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             
-            <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
         
@@ -125,32 +125,11 @@
     <section class="center-section">
         <h1 class=" title" style="margin-bottom: 0px;"> Nos promotions </h1>
     </section>
+    
     <section class="banner">
-        <div class="box">
-            <div class="solde">Solde 50%</div>
-            <img src="images/solaire4.png" alt="">
-            <div class="content">
-                <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="solde">Solde 50%</div>
-            <img src="images/lunettes10.jpg" alt="">
-            <div class="content">
-                <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="solde">Solde 50%</div>
-            <img src="images/solaire3.png" alt="">
-            <div class="content">
-                <a href="products.php" class="btn acheter-maintenant margin-top-80 ">Acheter maintenant</a>
-            </div>
-        </div>
-
+        <?php  include('fonctions-php/top-3-produits.php'); ?>
     </section>
+
     <section class="center-section">
         <h1 class=" title" style="margin-bottom: 0px;"> Nos services </h1>
     </section>

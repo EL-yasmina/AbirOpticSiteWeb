@@ -1,5 +1,7 @@
 <?php
 
+include('session.php');
+    
 $conn = mysqli_connect("localhost","root","","abiroptic");
 
 // Vérification de la connexion
@@ -16,22 +18,24 @@ $sql = "SELECT id, nom, prenom FROM Client WHERE email = '$email' AND password =
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Utilisateur authentifié, récupération des données
+
     $row = $result->fetch_assoc();
     $id = $row['id'];
     $nom = $row['nom'];
     $prenom = $row['prenom'];
 
-    // Démarrer la session (si elle n'est pas déjà démarrée)
-    session_start();
-
-    // Enregistrez les informations de l'utilisateur dans la session
     $_SESSION['id'] = $id;
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
 
     // Redirection vers la page d'accueil
-    header("Location: ../accueil.php");
+    if (isset($_SESSION['page']) && $_SESSION['page'] === 'panier.php') {     
+        header("Location: ../panier.php");
+        $_SESSION['panier'] = [];
+    }
+    else {
+        header("Location: ../accueil.php");
+    }
 } else {
     // Authentification échouée, rediriger vers la page de connexion avec un message d'erreur
     header("Location: login.php?erreur=1");

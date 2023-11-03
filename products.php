@@ -56,7 +56,7 @@
                         // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
                         if (!isset($_SESSION['nom'])) {
                             echo '<li><a href="login.php">se connecter</a></li>';
-                            echo '<li><a href="register.php">s\'inscrire</a></li>';
+                            echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
                             echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
@@ -68,7 +68,7 @@
         </nav>
 
         <div class="icons">
-            <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
 
@@ -82,66 +82,7 @@
 
     <section class="products">
         <div class="box-container">
-            <?php
-                $conn = mysqli_connect("localhost","root","","abiroptic");
-
-                // Vérification de la connexion
-                if ($conn->connect_error) {
-                    die("La connexion à la base de données a échoué : " . $conn->connect_error);
-                }
-
-                // Requête SQL pour sélectionner tous les produits
-                $sql = "SELECT * FROM produit";
-
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        $imageData = $row['image'];
-                        $imageBase64 = base64_encode($imageData);
-
-                        $html =  
-                        '<div class="box">
-                            <div class="image">
-                                <div class="icons">
-                                    <a href="?ajouterAuPanier=' .$row['id']. '" class="fas fa-shopping-cart"></a>
-                                    <a href="#" class="fas fa-eye"></a>
-                                </div>
-                                <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $row['nom'] . '">
-                            </div>
-                            <div class="content">
-                                <h3>' . $row['nom'] . '</h3>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>';
-                        
-                        if ($row['solde'] > 0) {
-                            $html .= '<div class="price">' . $row['solde'] . ' dh <span>' . $row['prix'] . ' dh</span></div>';
-                        } else {
-                            $html .= '<div class="price">' . $row['prix'] . ' dh </div>';
-                        }
-                        
-                        $html .= '</div> 
-                        </div>';
-
-
-                        echo $html;
-
-                        
-
-                    }
-                } else {
-                    echo "Aucun produit trouvé dans la base de données.";
-                }
-
-                // Fermer la connexion à la base de données
-                $conn->close();
-            ?>
-
+            <?php include('fonctions-php/list-produits.php');?>
         </div>
 
     </section>

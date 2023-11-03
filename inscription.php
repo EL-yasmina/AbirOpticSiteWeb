@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>panier</title>
+    <title>S'inscrire</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -29,7 +29,8 @@
             <img src="images/logo.png" alt="abiroptic" class="img-logo" >
         </a>
 
-        <nav class="navbar">
+
+    <nav class="navbar">
         <ul>
             <li><a href="accueil.php">accueil</a></li>
             <li><a href="products.php">produits</a></li>
@@ -54,7 +55,7 @@
                         // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
                         if (!isset($_SESSION['nom'])) {
                             echo '<li><a href="login.php">se connecter</a></li>';
-                            echo '<li><a href="register.php">s\'inscrire</a></li>';
+                            echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
                             echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
@@ -67,11 +68,14 @@
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-       
-        <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+        <div id="search-btn" class="fas fa-search"></div>
+        <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
     </div>
 
-    
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
 
 </header>
 
@@ -80,35 +84,44 @@
 <!-- header section  -->
 
 <section class="heading">
-    <h1>Panier d'achat</h1>
-    <p> <a href="accueil.php">accueil</a> >> panier </p>
+    <h1>Compte</h1>
+    <p> <a href="accueil.php">accueil</a> >> s'inscrire </p>
 </section>
 
 <!-- header section -->
 
-<!-- cart section starts  -->
+<!-- header section -->
 
-<section class="shopping-cart">
+<!-- register form section starts -->
 
-    <h1 class="title"> vos produits </h1>
+<section class="register-form">
 
-    <div class="box-container">
-        
-    <?php include('fonctions-php/list-produits-panier.php'); ?>
-
-    </div>
-
-    <h1 class="title">Panier de commande</h1>
-
-    <div class="cart-total">
-        <h3>subtotal : <span>$100.00</span></h3>
-        <h3>total : <span>$100.00</span></h3>
-        <a href="#" class="btn">passer au paiement</a>
-    </div>
+    <form action="">
+        <h3>S'inscrire maintenant</h3>
+        <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" name="" placeholder="votre Nom Complet " id="" required>
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" name="" placeholder="votre e-mail" id="" required>
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-lock"></span>
+            <input type="password" name="" placeholder="Entrez votre mot de passe " id="" required>
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-lock"></span>
+            <input type="password" name="" placeholder="confirmez votre mot de passe " id="" required>
+        </div>
+        <input type="submit" value="Inscription" class="btn">
+        <a href="login.php" class="btn">Vous avez déjà un compte</a>
+    </form>
 
 </section>
 
-<!-- cart section end -->
+<!-- register form section ends -->
+
 
 
 
@@ -121,7 +134,6 @@
 
 
 <!-- footer section starts  -->
-
 <section class="footer">
 
     <div class="credit">
@@ -132,16 +144,12 @@
         </div>
 
         <h4>Suivez-nous</h4>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px"> </a>
+        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"><img src="images/facebook.png" alt="facebook" height="30px" width="30px"> </a>
 
         <a href="https://www.instagram.com/abiroptic/"> <img src="images/instagram.png" alt="instagram" height="30px" width="30px"> </a>
 
     </div>
 </section>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script
-    type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
 
 <!-- footer section ends -->
 

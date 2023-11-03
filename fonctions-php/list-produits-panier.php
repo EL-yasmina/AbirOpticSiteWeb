@@ -36,7 +36,7 @@ if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
                         <span>quantity :</span>
                         <input type="number" name="" value="'.$produit['quantite'].'" id="">
                     </form>
-                    <div class="price"> ' . $row['prix'] . ' DH <span>' . $row['prix'] . ' DH</span> </div>
+                    <div class="price"> ' . sprintf("%.02f", ($row['prix'] - (  ($row['solde'] * $row['prix'] )/100   ))) . ' DH <span>' . $row['prix'] . ' DH</span> </div>
                 </div>
             </div>
             ';
@@ -46,7 +46,5 @@ if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
     echo $listeProduits;
 
     $conn->close();
-    } else {
-        echo 'Le panier est vide.';
     }
 ?>

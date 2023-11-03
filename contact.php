@@ -60,7 +60,7 @@
                         // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
                         if (!isset($_SESSION['nom'])) {
                             echo '<li><a href="login.php">se connecter</a></li>';
-                            echo '<li><a href="register.php">s\'inscrire</a></li>';
+                            echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
                             echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
@@ -74,7 +74,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             
-            <a href="cart.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
        
