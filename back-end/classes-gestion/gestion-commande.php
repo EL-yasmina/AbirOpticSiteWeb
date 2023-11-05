@@ -1,9 +1,8 @@
 <?php
-    include('../classes-tables/commande.php');
+    include('../../back-end/classes-tables/commande.php');
     include('base-de-donnees.php');
 
     class GestionCommande extends BaseDeDonnees {
-        private $db;
 
         public function selectAvecId($id) {
             $this->connexionDb();
@@ -37,7 +36,7 @@
             $this->connexionDb();
             $query = "
                 INSERT INTO commande (date, id_produit, id_client, quantite, status)
-                VALUES ('".$commande->date."', ".$commande->id_produit.", ".$commande->id_client.", 
+                VALUES (CURRENT_DATE(), ".$commande->id_produit.", ".$commande->id_client.", 
                 ".$commande->quantite.", '".$commande->status."');";
                     
             $this->db->query($query);

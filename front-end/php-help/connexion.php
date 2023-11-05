@@ -1,37 +1,24 @@
 <?php
 
 include('session.php');
-    
-$conn = mysqli_connect("localhost","root","","abiroptic");
+include('../../back-end/classes-gestion/gestion-client.php');
 
-// Vérification de la connexion
-if ($conn->connect_error) {
-    die("La connexion à la base de données a échoué : " . $conn->connect_error);
-}
-
-// Récupération des données du formulaire
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// Requête pour vérifier les informations de connexion
-$sql = "SELECT id, nom, prenom FROM Client WHERE email = '$email' AND password = '$password'";
-$result = $conn->query($sql);
+$gestionClient = new GestionClient();
+$client = $gestionClient->selectAvecEmailEtPassword($email,$password);
+if ($client != null) {
 
-if ($result->num_rows > 0) {
-
-    $row = $result->fetch_assoc();
-    $id = $row['id'];
-    $nom = $row['nom'];
-    $prenom = $row['prenom'];
-
-    $_SESSION['id'] = $id;
-    $_SESSION['nom'] = $nom;
-    $_SESSION['prenom'] = $prenom;
+    $_SESSION['id'] = $client->id;
+    $_SESSION['nom'] = $client->nom;
+    $_SESSION['prenom'] = $client->prenom;
 
     // Redirection vers la page d'accueil
     if (isset($_SESSION['page']) && $_SESSION['page'] === 'panier.php') {     
         header("Location: ../panier.php");
         $_SESSION['panier'] = [];
+        $_SESSION['page'] = null;
     }
     else {
         header("Location: ../accueil.php");
@@ -40,7 +27,5 @@ if ($result->num_rows > 0) {
     // Authentification échouée, rediriger vers la page de connexion avec un message d'erreur
     header("Location: login.php?erreur=1");
 }
-
-// Fermer la connexion à la base de données
-$conn->close();
+ 
 ?>

@@ -1,24 +1,14 @@
-<?php
-    $conn = mysqli_connect("localhost","root","","abiroptic");
-
-    // Vérification de la connexion
-    if ($conn->connect_error) {
-        die("La connexion à la base de données a échoué : " . $conn->connect_error);
-    }
-
-    // Requête SQL pour sélectionner tous les produits
-    $sql = "SELECT * FROM produit ORDER BY solde DESC LIMIT 3;";
-
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $imageData = $row['image'];
+<?php    
+    $gestionProduit = new GestionProduit();
+    $produits = $gestionProduit->selectTop3();
+    if (count($produits) > 0) {
+        foreach ($produits as $produit) {
+            $imageData = $produit->image;
             $imageBase64 = base64_encode($imageData);
             $html = '
             <div class="box">
-                <div class="solde">Solde '. sprintf("%d", $row['solde']) .'%</div>
-                <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $row['nom'] . '">
+                <div class="solde">Solde '. sprintf("%d", $produit->solde) .'%</div>
+                <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $produit->nom . '">
                 <div class="content">
                     <a href="produits.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
                 </div>
@@ -28,7 +18,4 @@
     } else {
         echo "Aucun produit trouvé dans la base de données.";
     }
-
-    // Fermer la connexion à la base de données
-    $conn->close();
 ?>

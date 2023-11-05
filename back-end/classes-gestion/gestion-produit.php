@@ -1,5 +1,5 @@
 <?php
-    include('../classes-tables/produit.php');    
+    include('../back-end/classes-tables/produit.php');
     include('base-de-donnees.php');
     class GestionProduit extends BaseDeDonnees {
 
@@ -18,7 +18,22 @@
 
         public function selectTout() {
             $this->connexionDb();
-            $query = "SELECT * FROM produit";
+            $query = "SELECT * FROM produit ORDER BY solde desc";
+            $result = $this->db->query($query);
+            $produits = array();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $produit = $this->convertToProduit($row);
+                    $produits[] = $produit;
+                }
+            }
+            $this->fermerDb();
+            return $produits;
+        }
+
+        public function selectTop3() {
+            $this->connexionDb();
+            $query = "SELECT * FROM produit ORDER BY solde DESC LIMIT 3";
             $result = $this->db->query($query);
             $produits = array();
             if ($result->num_rows > 0) {
