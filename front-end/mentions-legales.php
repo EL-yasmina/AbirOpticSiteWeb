@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,28 +17,28 @@
     <script src="js/script.js" defer></script>
 
 </head>
+
 <body>
-<?php
-    include('fonctions-php/session.php');
-    include('fonctions-php/navbar.php');
-    
+    <?php
+    include('php-help/session.php');
+    include('php-help/navbar.php');    
 ?>
 
-<header class="header">
+    <header class="header">
 
         <a href="accueil.php" class="logo">
-            <img src="images/logo.png" alt="abiroptic" class="img-logo" >
+            <img src="images/logo.png" alt="abiroptic" class="img-logo">
         </a>
 
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="accueil.php">accueil</a></li>
-            <li><a href="products.php">produits</a></li>
-            <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
-                
-            <li><a href="contact.php">contact</a></li>
-            <li>
+        <nav class="navbar">
+            <ul>
+                <li><a href="accueil.php">accueil</a></li>
+                <li><a href="produits.php">produits</a></li>
+                <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
+
+                <li><a href="contact.php">contact</a></li>
+                <li>
                     <a href="#" id="user-menu">
                         <?php
                         // Vérifier si l'utilisateur est authentifié
@@ -58,99 +59,80 @@
                             echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
-                            echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
+                            echo '<li><a href="php-help/deconnexion.php">se deconnecter</a></li>';
                         }
                         ?>
                     </ul>
                 </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        
-        <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
-    </div>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
 
-   
-
-</header>
-
-<!-- header section ends -->
-
-<!-- header section  -->
-
-<section class="heading">
-    <h1>Mentions légales</h1>
-    <p> <a href="accueil.php">accueil</a> >> Mentions légales </p>
-</section>
-
-
-<section style="font-size: 15px;">
-    <h3>Editeur</h3>
-    <p >L'éditeur de ce site est <span style="font-size: large;"> ABIR OPTIC </span>, est une société dont l'activité est la vente en détail de produits d'optique-lunetier (opticien),<br> immatruculée au Registre du commerce sous le numéro 77424.<br>Identifiant commun de l'entreprise(numéro siret): 002130713000091  </p>
-    <p>Adresse: HAY JADID RUE MOHAMED V N 75 ZEGHANGHANE (M)</p>
-    <p>Tél: +212 536351121 </p>
-    <p>Email: contact.abiroptic@gmail.com</p>
-    <br>
-    <h3>Hébergement</h3>
-    <p>Lorem ipsum dolor </p>
-    <p>Lorem ipsum dolor </p>
-    <p>Lorem ipsum dolor</p> 
-    <br>
-    <h3>Confidentialité et Données Personnelles</h3>
-    <p>Abir Optic attache une grande importance à la protection de vos données personnelles. Nous nous engageons à respecter les lois applicables en matière de protection des données et à assurer la confidentialité et la sécurité de vos informations personnelles.</p>
-    <h4>Collecte des Données</h4>
-    <p>Lorsque vous utilisez notre site web ou que vous effectuez un achat, nous pouvons collecter des informations personnelles telles que votre nom, adresse, numéro de téléphone et adresse e-mail. Ces informations sont collectées dans le but de traiter vos commandes et de vous fournir un service client de qualité.</p>
-    <h4>Utilisation des Données</h4>
-    <p>Les données personnelles que vous nous fournissez peuvent être utilisées pour les finalités suivantes :
-     <ul>
-        <li>Traitement des commandes et livraison des produits.</li>
-        <li>Communication avec vous concernant votre commande.</li>
-        <li>Réponse à vos questions et demandes.</li>
-        <li>Amélioration de notre site web et de nos services.</li>
-     </ul>
-    </p>
-    
-    <h4>Partage des Données</h4>
-    <p>Nous ne vendons ni ne louons vos données personnelles à des tiers. Cependant, dans le cadre de l'exécution de nos services, nous pouvons partager vos informations avec des prestataires de services tiers tels que des transporteurs pour la livraison de vos commandes.</p>
-    <h4>Vos droits</h4>
-    <p>Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles. Pour exercer ces droits ou pour toute question concernant la protection des données, veuillez nous contacter à Contact.Abiroptic@gmail.com.</p>
-
-    
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-
-<section class="footer">
-
-    <div class="credit">
-        <div>
-            <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-            <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
+            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
         </div>
 
-        <h4>Suivez-nous</h4>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px"></a>
 
-        <a href="https://www.instagram.com/abiroptic/"><img src="images/instagram.png" alt="instagram" height="30px" width="30px"></a>
 
-    </div>
-</section>
+    </header>
 
-<!-- footer section ends -->
+    <!-- header section ends -->
+
+    <!-- header section  -->
+
+    <section class="heading">
+        <h1>Mentions légales</h1>
+        <p> <a href="accueil.php">accueil</a> >> Mentions légales </p>
+    </section>
+
+
+    <section style="font-size: 15px;">
+        <h3>Editeur</h3>
+        <p>L'éditeur de ce site est <span style="font-size: large;"> ABIR OPTIC </span>, est une société dont l'activité
+            est la vente en détail de produits d'optique-lunetier (opticien),<br> immatruculée au Registre du commerce
+            sous le numéro 77424.<br>Identifiant commun de l'entreprise(numéro siret): 002130713000091 </p>
+        <p>Adresse: HAY JADID RUE MOHAMED V N 75 ZEGHANGHANE (M)</p>
+        <p>Tél: +212 536351121 </p>
+        <p>Email: contact.abiroptic@gmail.com</p>
+        <br>
+        <h3>Hébergement</h3>
+        <p>Lorem ipsum dolor </p>
+        <p>Lorem ipsum dolor </p>
+        <p>Lorem ipsum dolor</p>
+        <br>
+        <h3>Confidentialité et Données Personnelles</h3>
+        <p>Abir Optic attache une grande importance à la protection de vos données personnelles. Nous nous engageons à
+            respecter les lois applicables en matière de protection des données et à assurer la confidentialité et la
+            sécurité de vos informations personnelles.</p>
+        <h4>Collecte des Données</h4>
+        <p>Lorsque vous utilisez notre site web ou que vous effectuez un achat, nous pouvons collecter des informations
+            personnelles telles que votre nom, adresse, numéro de téléphone et adresse e-mail. Ces informations sont
+            collectées dans le but de traiter vos commandes et de vous fournir un service client de qualité.</p>
+        <h4>Utilisation des Données</h4>
+        <p>Les données personnelles que vous nous fournissez peuvent être utilisées pour les finalités suivantes :
+        <ul>
+            <li>Traitement des commandes et livraison des produits.</li>
+            <li>Communication avec vous concernant votre commande.</li>
+            <li>Réponse à vos questions et demandes.</li>
+            <li>Amélioration de notre site web et de nos services.</li>
+        </ul>
+        </p>
+
+        <h4>Partage des Données</h4>
+        <p>Nous ne vendons ni ne louons vos données personnelles à des tiers. Cependant, dans le cadre de l'exécution de
+            nos services, nous pouvons partager vos informations avec des prestataires de services tiers tels que des
+            transporteurs pour la livraison de vos commandes.</p>
+        <h4>Vos droits</h4>
+        <p>Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles. Pour exercer ces droits
+            ou pour toute question concernant la protection des données, veuillez nous contacter à
+            Contact.Abiroptic@gmail.com.</p>
+
+
+    </section>
+
+    <?php include('php-composants/footer.php'); ?>
 
 </body>
+
 </html>

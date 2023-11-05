@@ -20,7 +20,7 @@
                 <div class="solde">Solde '. sprintf("%d", $row['solde']) .'%</div>
                 <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $row['nom'] . '">
                 <div class="content">
-                    <a href="products.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
+                    <a href="produits.php" class="btn acheter-maintenant margin-top-80">Acheter maintenant</a>
                 </div>
             </div>';
             echo $html;

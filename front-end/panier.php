@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,28 +17,29 @@
     <script src="js/script.js" defer></script>
 
 </head>
+
 <body>
-<?php
-    include('fonctions-php/session.php');
-    include('fonctions-php/navbar.php');
+    <?php
+    include('php-help/session.php');
+    include('php-help/navbar.php');
     
     $_SESSION['page'] = 'panier.php';
 ?>
 
-<header class="header">
+    <header class="header">
 
         <a href="accueil.php" class="logo">
-            <img src="images/logo.png" alt="abiroptic" class="img-logo" >
+            <img src="images/logo.png" alt="abiroptic" class="img-logo">
         </a>
 
         <nav class="navbar">
-        <ul>
-            <li><a href="accueil.php">accueil</a></li>
-            <li><a href="products.php">produits</a></li>
-            <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
-               
-            <li><a href="contact.php">contact</a></li>
-            <li>
+            <ul>
+                <li><a href="accueil.php">accueil</a></li>
+                <li><a href="produits.php">produits</a></li>
+                <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
+
+                <li><a href="contact.php">contact</a></li>
+                <li>
                     <a href="#" id="user-menu">
                         <?php
                         // Vérifier si l'utilisateur est authentifié
@@ -58,41 +60,41 @@
                             echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
-                            echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
+                            echo '<li><a href="php-help/deconnexion.php">se deconnecter</a></li>';
                         }
                         ?>
                     </ul>
                 </li>
-        </ul>
-    </nav>
+            </ul>
+        </nav>
 
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-       
-        <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
-    </div>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
 
-    
+            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+        </div>
 
-</header>
 
-<!-- header section ends -->
 
-<!-- header section  -->
+    </header>
 
-<section class="heading">
-    <h1>Panier d'achat</h1>
-    <p> <a href="accueil.php">accueil</a> >> panier </p>
-</section>
+    <!-- header section ends -->
 
-<!-- header section -->
+    <!-- header section  -->
 
-<!-- cart section starts  -->
+    <section class="heading">
+        <h1>Panier d'achat</h1>
+        <p> <a href="accueil.php">accueil</a> >> panier </p>
+    </section>
 
-<section class="shopping-cart">
+    <!-- header section -->
 
-    <h1 class="title"> 
-        <?php  
+    <!-- cart section starts  -->
+
+    <section class="shopping-cart">
+
+        <h1 class="title">
+            <?php  
             if (empty($_SESSION['panier'])) {
                 echo 'Pas de produit dans votre panier';
             }
@@ -101,45 +103,41 @@
             }
         ?>
 
-    </h1>
+        </h1>
 
-    <div class="box-container">
-        
-    <?php include('fonctions-php/list-produits-panier.php'); ?>
+        <div class="box-container">
 
-    </div>
+            <?php include('php-composants/panier-list-produits.php'); ?>
 
-    <h1 class="title">Prix total panier</h1>
-
-    <div class="cart-total">
-        <h3>total : <span><?php echo calculerSommeTotalProduitsDansPanier(); ?> DH</span></h3>
-        <a href="fonctions-php/valider-la-commande.php" class="btn">Valider la commande</a>
-    </div>
-
-</section>
-
-<section class="footer">
-
-    <div class="credit">
-        <div>
-            <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-            <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
         </div>
 
-        <h4>Suivez-nous</h4>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px"> </a>
+        <h1 class="title">Prix total panier</h1>
 
-        <a href="https://www.instagram.com/abiroptic/"> <img src="images/instagram.png" alt="instagram" height="30px" width="30px"> </a>
+        <div class="cart-total">
+            <h3>total : <span><?php echo calculerSommeTotalProduitsDansPanier(); ?> DH</span></h3>
+            <a href="php-help/valider-la-commande.php" class="btn">Valider la commande</a>
+        </div>
 
-    </div>
-</section>
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script
-    type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+    </section>
 
-<!-- footer section ends -->
+    <?php include('php-composants/footer.php'); ?>
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/yasminataif99/30min',
+            text: 'Prendre un rendez-vous avec nous',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+        });
+    }
+    </script>
+
+    <!-- footer section ends -->
 
 </body>
+
 </html>

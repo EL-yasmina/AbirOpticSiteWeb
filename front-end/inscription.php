@@ -18,9 +18,8 @@
 </head>
 <body>
 <?php
-    include('fonctions-php/session.php');
-    include('fonctions-php/navbar.php');
-    
+    include('php-help/session.php');
+    include('php-help/navbar.php');    
 ?>
 
 <header class="header">
@@ -33,7 +32,7 @@
     <nav class="navbar">
         <ul>
             <li><a href="accueil.php">accueil</a></li>
-            <li><a href="products.php">produits</a></li>
+            <li><a href="produits.php">produits</a></li>
             <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
                
             <li><a href="contact.php">contact</a></li>
@@ -58,7 +57,7 @@
                             echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                         }
                         else {
-                            echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
+                            echo '<li><a href="php-help/deconnexion.php">se deconnecter</a></li>';
                         }
                         ?>
                     </ul>
@@ -120,38 +119,7 @@
 
 </section>
 
-<!-- register form section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- footer section starts  -->
-<section class="footer">
-
-    <div class="credit">
-        <div>
-            <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-            <a href="mentions-legales.php">Mentions légales</a><br />
-            <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
-        </div>
-
-        <h4>Suivez-nous</h4>
-        <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"><img src="images/facebook.png" alt="facebook" height="30px" width="30px"> </a>
-
-        <a href="https://www.instagram.com/abiroptic/"> <img src="images/instagram.png" alt="instagram" height="30px" width="30px"> </a>
-
-    </div>
-</section>
-
-<!-- footer section ends -->
+<?php include('php-composants/footer.php'); ?>
 
 </body>
 </html>

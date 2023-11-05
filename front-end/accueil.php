@@ -19,71 +19,13 @@
 </head>
 
 <body>
-<?php
-    include('fonctions-php/session.php');
-    include('fonctions-php/navbar.php');
     
-?>
-    <!-- header section starts  -->
-
-    <header class="header">
-
-        <a href="accueil.php" class="logo">
-            <img src="images/logo.png" alt="abiroptic" class="img-logo" >
-        </a>
-
-        <nav class="navbar">
-            <ul>
-                <li><a href="accueil.php" class="selected-menu">accueil</a></li>
-                <li><a href="products.php">produits</a></li>
-                <li><a href="qui-sommes-nous.php">Qui sommes-nous</a></li>
-                <li><a href="contact.php">contact</a></li>
-                <li>
-                    <a href="#" id="user-menu">
-                        <?php
-                        // Vérifier si l'utilisateur est authentifié
-                        if (isset($_SESSION['nom'])) {
-                            // L'utilisateur est connecté, afficher son nom
-                            echo $_SESSION['nom'];
-                        } else {
-                            // L'utilisateur n'est pas connecté, afficher "Compte +"
-                            echo 'Compte +';
-                        }
-                        ?>
-                    </a>
-                    <ul>
-                        <?php
-                        // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
-                        if (!isset($_SESSION['nom'])) {
-                            echo '<li><a href="login.php">se connecter</a></li>';
-                            echo '<li><a href="inscription.php">s\'inscrire</a></li>';
-                        }
-                        else {
-                            echo '<li><a href="fonctions-php/deconnexion.php">se deconnecter</a></li>';
-                        }
-                        ?>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        
-
-        <div class="icons">
-            <div id="menu-btn" class="fas fa-bars"></div>
-            
-            <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
-        </div>
-
-        
-
-    </header>
-
-    <!-- header section ends -->
-
-    <!-- home section starts      -->
+    <?php 
+        include('php-help/session.php');
+        include('php-composants/header.php'); 
+    ?>
+    <script>document.getElementById("accueil").classList.add('selected-menu');</script>
     
-
     <section class="accueil">
 
         <div class="slide active" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
@@ -91,7 +33,7 @@
                 style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size:1.5em; border-radius:7px; border-style:double;">
                 <h1>BIENVENUE CHEZ ABIR OPTIC</h1>
                 <h2>Votre vision, Notre passion!</h2>
-                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -100,7 +42,7 @@
                 style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px; border-style:double;">
                 <h1>CHEZ ABIR OPTIC</h1>
                 <h2>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
-                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -110,7 +52,7 @@
                 <h1>ABIR OPTIC</h1>
                 <h2>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
                 </h2>
-                <a href="products.php" class="btn acheter-maintenant">Découvrir nos produits</a>
+                <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
@@ -127,7 +69,7 @@
     </section>
     
     <section class="banner">
-        <?php  include('fonctions-php/top-3-produits.php'); ?>
+        <?php  include('php-composants/accueil-top-3-produits.php'); ?>
     </section>
 
     <section class="center-section">
@@ -175,28 +117,12 @@
 
 
 
-    <section class="footer">
+    <?php include('php-composants/footer.php'); ?>
 
-        <div class="credit">
-            <div>
-                <p>&copy; 2023 Abir optic - Tout droit réservés</p>
-                <a href="mentions-legales.php">Mentions légales</a><br />
-                <a href="cgv.php">Conditions Générales de Vente (CGV) </a><br />
-            </div>
-
-            <h4>Suivez-nous</h4>
-            <a href="https://www.facebook.com/abiroptic.page/?locale=fr_FR"> <img src="images/facebook.png" alt="facebook" height="30px" width="30px">
-            </a>
-
-            <a href="https://www.instagram.com/abiroptic/"> <img src="images/instagram.png" alt="instagram" height="30px" width="30px"> </a>
-
-        </div>
-    </section>
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script
-        type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
-    <!-- footer section ends -->
+    <script type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+
 
 </body>
 
