@@ -23,20 +23,18 @@
 
 <body>
 
-<?php 
+    <?php 
         include('php-help/session.php');
         include('php-composants/header.php'); 
     ?>
-    <script>document.getElementById("contact").classList.add('selected-menu');</script>
-    
+    <script>
+    document.getElementById("contact").classList.add('selected-menu');
+    </script>
+
     <section class="heading">
         <h1>nous contacter</h1>
         <p> <a href="accueil.php">accueil</a> >> contact </p>
     </section>
-
-    <!-- header section -->
-
-    <!-- contact section starts  -->
 
     <section class="contact">
 
@@ -96,78 +94,72 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <?php include('php-composants/footer.php'); ?>
 
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script
-        type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+    <script type="text/javascript">
+    window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/yasminataif99/30min',
+            text: 'Prendre un rendez-vous avec nous',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+        });
+    }
+    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        function sendMessage() {
-            let from_this_email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            let tel = document.getElementById("tel").value;
-            let nom = document.getElementById("nom").value;
+    function sendMessage() {
+        let from_this_email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        let tel = document.getElementById("tel").value;
+        let nom = document.getElementById("nom").value;
 
-            emailjs.send("service_83185bj", "template_xc5kvg5", {
-                from_name: from_this_email,
-                to_name: nom,
-                message: message,
-                reply_to: tel,
-            }).then(function (res) {
-                console.log('res...', res);
-                alert("res :" + res)
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("error :" + error)
-            });
-        }
-
+        emailjs.send("service_83185bj", "template_xc5kvg5", {
+            from_name: from_this_email,
+            to_name: nom,
+            message: message,
+            reply_to: tel,
+        }).then(function(res) {
+            console.log('res...', res);
+            alert("res :" + res)
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert("error :" + error)
+        });
+    }
     </script>
 
     <script>
-        (function () {
-            emailjs.init("R6G3VN3HDr3ig-NUC");
-        })();
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-            var form = this;
-            var formData = new FormData(form);
+    (function() {
+        emailjs.init("R6G3VN3HDr3ig-NUC");
+    })();
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        var form = this;
+        var formData = new FormData(form);
 
-            let from_this_email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            let tel = document.getElementById("tel").value;
-            let nom = document.getElementById("nom").value;
+        let from_this_email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+        let tel = document.getElementById("tel").value;
+        let nom = document.getElementById("nom").value;
 
-            emailjs.send("service_83185bj", "template_xc5kvg5", {
-                from_name: from_this_email,
-                to_name: nom,
-                message: message,
-                reply_to: tel,
-            }).then(function (res) {
-                alert('Votre message a été envoyé', res);
-                form.reset();
-            }, function (error) {
-                alert('Il y a eu une erreur lors de l\'envoi. Merci de réessayer ultérieurement.' + error);
-                form.reset();
-            });
+        emailjs.send("service_83185bj", "template_xc5kvg5", {
+            from_name: from_this_email,
+            to_name: nom,
+            message: message,
+            reply_to: tel,
+        }).then(function(res) {
+            alert('Votre message a été envoyé', res);
+            form.reset();
+        }, function(error) {
+            alert('Il y a eu une erreur lors de l\'envoi. Merci de réessayer ultérieurement.' + error);
+            form.reset();
         });
+    });
     </script>
 
 </body>

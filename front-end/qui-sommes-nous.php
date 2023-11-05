@@ -19,22 +19,19 @@
 </head>
 
 <body>
-    
+
     <?php 
         include('php-help/session.php');
         include('php-composants/header.php'); 
     ?>
-    <script>document.getElementById("qui-sommes-nous").classList.add('selected-menu');</script>
+    <script>
+    document.getElementById("qui-sommes-nous").classList.add('selected-menu');
+    </script>
 
     <section class="heading">
         <h1>Qui sommes-nous</h1>
         <p> <a href="accueil.php">accueil</a> >> Qui sommes-nous</p>
     </section>
-
-    <!-- header section -->
-
-    <!-- about section starts  -->
-
     <section class="qui-sommes-nous">
         <div class="row">
             <div class="image">
@@ -119,7 +116,17 @@
 
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+    <script type="text/javascript">
+    window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/yasminataif99/30min',
+            text: 'Prendre un rendez-vous avec nous',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+        });
+    }
+    </script>
 
 </body>
 

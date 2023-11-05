@@ -19,13 +19,15 @@
 </head>
 
 <body>
-    
+
     <?php 
         include('php-help/session.php');
         include('php-composants/header.php'); 
     ?>
-    <script>document.getElementById("accueil").classList.add('selected-menu');</script>
-    
+    <script>
+    document.getElementById("accueil").classList.add('selected-menu');
+    </script>
+
     <section class="accueil">
 
         <div class="slide active" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
@@ -46,7 +48,7 @@
             </div>
         </div>
 
-        <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; " >
+        <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; ">
             <div class="content"
                 style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px;border-style:double;">
                 <h1>ABIR OPTIC</h1>
@@ -60,14 +62,11 @@
         <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
 
     </section>
-
-    <!-- home section ends     -->
-
-    <!-- banner section starts  -->
+    
     <section class="center-section">
         <h1 class=" title" style="margin-bottom: 0px;"> Nos promotions </h1>
     </section>
-    
+
     <section class="banner">
         <?php  include('php-composants/accueil-top-3-produits.php'); ?>
     </section>
@@ -81,8 +80,8 @@
             <div class="icons">
                 <img src="images/icon-1.png" alt="">
                 <h3>Examen de la vue professionnelle</h3>
-             
-                
+
+
             </div>
 
 
@@ -111,9 +110,9 @@
 
 
         </div>
-      
+
     </section>
-   
+
 
 
 
@@ -121,7 +120,17 @@
 
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">window.onload = function () { Calendly.initBadgeWidget({ url: 'https://calendly.com/yasminataif99/30min', text: 'Prendre un rendez-vous avec nous', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+    <script type="text/javascript">
+    window.onload = function() {
+        Calendly.initBadgeWidget({
+            url: 'https://calendly.com/yasminataif99/30min',
+            text: 'Prendre un rendez-vous avec nous',
+            color: '#0069ff',
+            textColor: '#ffffff',
+            branding: false
+        });
+    }
+    </script>
 
 
 </body>
