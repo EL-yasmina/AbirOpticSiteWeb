@@ -42,8 +42,7 @@
         <div class="slide" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
             <div class="content"
                 style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px; border-style:double;">
-                <h1>CHEZ ABIR OPTIC</h1>
-                <h2>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
+                <h4>CHEZ ABIR OPTIC<br>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h4>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
@@ -51,9 +50,8 @@
         <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; ">
             <div class="content"
                 style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px;border-style:double;">
-                <h1>ABIR OPTIC</h1>
-                <h2>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
-                </h2>
+                <h4>ABIR OPTIC <br>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
+                </h4>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
@@ -64,7 +62,7 @@
     </section>
     
     <section class="center-section">
-        <h1 class=" title" style="margin-bottom: 0px;"> Nos promotions </h1>
+        <h2 class=" title" style="margin-bottom: 0px;"> Nos promotions </h2>
     </section>
 
     <section class="banner">
@@ -72,7 +70,7 @@
     </section>
 
     <section class="center-section">
-        <h1 class=" title" style="margin-bottom: 0px;"> Nos services </h1>
+        <h2 class=" title" style="margin-bottom: 0px;"> Nos services </h2>
     </section>
     <section class="qui-sommes-nous">
         <div class="icons-container">
@@ -110,6 +108,12 @@
 
 
         </div>
+
+    </section>
+  
+    <section class="avis">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <div class="elfsight-app-2856bc45-8642-47b3-8564-867b7cd10063" data-elfsight-app-lazy></div>
 
     </section>
 
