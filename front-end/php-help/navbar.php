@@ -1,5 +1,4 @@
 <?php 
-    include('../back-end/classes-gestion/gestion-produit.php');
     function calculerTotalProduitsDansPanier() {
         $totalProduits = 0;
         if (isset($_SESSION['panier'])) {

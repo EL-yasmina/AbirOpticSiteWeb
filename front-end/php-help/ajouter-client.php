@@ -1,7 +1,6 @@
 <?php
     // inclure les fichiers nécessaires
     include('session.php');
-    include('../../back-end/classes-gestion/gestion-client.php');
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];

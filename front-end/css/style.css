@@ -957,6 +957,10 @@ div.desc {
   font-size: 18px !important;
   font-weight:bold;
 }
+.selected-menu-panier {
+  color: rgb(35, 121, 201) !important;
+  font-weight:bold;
+}
 
 .radio-button-label{
   font-size: 12px !important;
@@ -966,4 +970,20 @@ div.desc {
   margin-top: 1rem !important; 
   margin-left: 1rem !important; 
   width: 15px !important;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  padding-left: 20px;
+  border-radius: 0.5rem;
+  padding-right: 20px;
+  padding-top: 14px;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  font-size: large;
+  border-radius: 0.5rem;
 }

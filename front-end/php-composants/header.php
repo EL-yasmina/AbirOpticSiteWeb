@@ -12,6 +12,12 @@
         <ul>
             <li><a id="accueil" href="accueil.php">accueil</a></li>
             <li><a id="produits" href="produits.php">produits</a></li>
+            <?php
+                if (isset($_SESSION['nom'])) {
+                    echo '<li><a id="commandes" href="commandes.php">commandes</a></li>';
+                }
+            ?>
+            
             <li><a id="qui-sommes-nous" href="qui-sommes-nous.php">Qui sommes-nous</a></li>
             <li><a id="contact" href="contact.php">contact</a></li>
             <li>
@@ -45,7 +51,7 @@
 
     <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>        
-        <a href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
+        <a id="panier" href="panier.php" class="fas fa-shopping-cart"> <?php echo calculerTotalProduitsDansPanier(); ?></a>
     </div>
 
 </header>

@@ -1,7 +1,4 @@
 <?php
-    include('../../back-end/classes-tables/client.php');
-    include('base-de-donnees.php');
-
     class GestionClient extends BaseDeDonnees {
     
         public function selectAvecEmailEtPassword($email, $password) {

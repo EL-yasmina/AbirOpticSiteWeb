@@ -21,6 +21,7 @@
 <body>
 
     <?php 
+        include('../back-end/back-end.php');
         include('php-help/session.php');
         include('php-composants/header.php'); 
     ?>

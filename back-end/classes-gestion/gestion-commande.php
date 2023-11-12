@@ -1,8 +1,20 @@
 <?php
-    include('../../back-end/classes-tables/commande.php');
-    include('base-de-donnees.php');
-
     class GestionCommande extends BaseDeDonnees {
+
+        public function selectTout() {
+            $this->connexionDb();
+            $query = "SELECT * FROM commande ORDER BY date DESC";
+            $result = $this->db->query($query);
+            $commandes = array();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $commande = $this->convertToCommande($row);
+                    $commandes[] = $commande;
+                }
+            }
+            $this->fermerDb();
+            return $commandes;
+        }
 
         public function selectAvecId($id) {
             $this->connexionDb();
@@ -19,7 +31,8 @@
 
         public function selectParClient($idClient) {
             $this->connexionDb();
-            $sql = "SELECT * FROM commande WHERE id_client = " . $idClient;
+            $sql = "SELECT * FROM commande WHERE id_client = " . $idClient ." ORDER BY date DESC";
+            echo $sql;
             $result = $this->db->query($sql);
             $commandes = array();
             if ($result->num_rows > 0) {

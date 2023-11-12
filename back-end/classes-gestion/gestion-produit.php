@@ -1,6 +1,4 @@
 <?php
-    include('../back-end/classes-tables/produit.php');
-    include('base-de-donnees.php');
     class GestionProduit extends BaseDeDonnees {
 
         public function selectAvecId($id) {
