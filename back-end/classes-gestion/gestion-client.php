@@ -30,6 +30,14 @@
             return $client;
         }
 
+        public function emailExist($email) {
+            $this->connexionDb();
+            $sql = "SELECT * FROM client WHERE email = '".$email."'";
+            $result = $this->db->query($sql);
+            $this->fermerDb();            
+            return $result->num_rows > 0;
+        }
+
         public function selectTout() {
             $this->connexionDb();
             $query = "SELECT * FROM client";

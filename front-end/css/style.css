@@ -958,3 +958,12 @@ div.desc {
   font-weight:bold;
 }
 
+.radio-button-label{
+  font-size: 12px !important;
+}
+.radio-button{
+  margin-bottom: 1rem !important; 
+  margin-top: 1rem !important; 
+  margin-left: 1rem !important; 
+  width: 15px !important;
+}

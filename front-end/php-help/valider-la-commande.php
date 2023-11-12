@@ -2,6 +2,7 @@
 
     include('session.php');
     include('../../back-end/classes-gestion/gestion-commande.php');
+    $_SESSION['page'] = 'panier.php';
     
     if(isset($_SESSION['id'])) {
         $idClient = $_SESSION['id'];

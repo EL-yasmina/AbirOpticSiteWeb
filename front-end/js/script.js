@@ -22,7 +22,26 @@ function prev(){
     slides[index].classList.add('active');
 }
 
+function validerMotDePasse() {
+        
+    var inputMotDePasse = document.getElementById('mot_de_passe');
+    var inputConfirmerMotDePasse = document.getElementById('confirmer_mot_de_passe');
+    var motDePasse = inputMotDePasse.value;        
+    var confirmerMotDePasse = inputConfirmerMotDePasse.value;
+    
+    if (motDePasse !== confirmerMotDePasse) {
+        inputConfirmerMotDePasse.setCustomValidity("Les mots de passe ne correspondent pas.");
+        inputConfirmerMotDePasse.reportValidity();
+        return false; 
+    }
+    return true; 
+}
 
+function cleanValidatorMotDePasse(){
+    var inputConfirmerMotDePasse = document.getElementById('confirmer_mot_de_passe');
+    inputConfirmerMotDePasse.setCustomValidity("");
+
+}
 
 
 

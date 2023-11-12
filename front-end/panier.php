@@ -15,7 +15,7 @@
     <?php 
         include('php-help/session.php');
         include('php-composants/header.php'); 
-        $_SESSION['page'] = 'panier.php';
+        $_SESSION['page'] = null;
     ?>
 
     <section class="heading">
