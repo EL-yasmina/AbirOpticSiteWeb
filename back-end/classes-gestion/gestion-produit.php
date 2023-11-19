@@ -74,7 +74,8 @@
                 $data['quantite'],
                 $data['image'],
                 $data['solde'],
-                $data['prix']
+                $data['prix'],
+                $data['description']
             );
         }
 
