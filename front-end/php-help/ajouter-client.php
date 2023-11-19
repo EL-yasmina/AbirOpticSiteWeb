@@ -1,6 +1,7 @@
 <?php
     // inclure les fichiers nécessaires
     include('session.php');
+    include('../../back-end/back-end.php');
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];

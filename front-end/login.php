@@ -24,7 +24,9 @@
         include('php-help/session.php');
         include('php-composants/header.php'); 
     ?>
-
+    <script>
+    document.getElementById("user-menu").classList.add('selected-menu');
+    </script>
     <section class="heading">
         <h1>compte</h1>
         <p> <a href="accueil.php">accueil</a> >> se connecter </p>
@@ -40,9 +42,9 @@
             </div>
             <div class="inputBox">
                 <span class="fas fa-lock"></span>
-                <input type="password" name="password" placeholder="votre mot de passe" id="" required>
+                <input id='mot_de_passe' type="password" name="password" placeholder="votre mot de passe" id="" required>
             </div>
-            <input type="submit" value="me connecter" class="btn">
+            <input type="submit" value="me connecter" class="btn"  onclick="cleanValidatorMotDePasseLogin()">
             <div class="flex">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">Se souvenir de moi</label>

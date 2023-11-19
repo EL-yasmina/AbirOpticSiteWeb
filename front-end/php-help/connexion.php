@@ -2,6 +2,8 @@
 
 include('session.php');
 
+include('../../back-end/back-end.php');
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 
@@ -25,7 +27,7 @@ if ($client != null) {
 
 } else {
     // Authentification échouée, rediriger vers la page de connexion avec un message d'erreur
-    header("Location: login.php?erreur=1");
+    header("Location: ../login.php?erreur=1");
 }
  
 ?>

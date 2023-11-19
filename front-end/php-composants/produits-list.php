@@ -11,7 +11,7 @@
                 <div class="image">
                     <div class="icons">
                         <a href="?ajouterAuPanier=' .$produit->id. '" class="fas fa-shopping-cart"></a>
-                        <a href="#" class="fas fa-eye"></a>
+                        <a  class="fas fa-eye" onclick="voirProduit(\''.$produit->nom.'\',\''. $produit->prix .'\')"></a>
                     </div>
                     <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $produit->nom . '">
                 </div>

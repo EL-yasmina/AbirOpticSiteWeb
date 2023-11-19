@@ -24,13 +24,14 @@
         <p> <a href="accueil.php">accueil</a> >> commandes </p>
     </section>
     <script>
-        document.getElementById("panier").classList.add('selected-menu-panier');
+        document.getElementById("commandes").classList.add('selected-menu');
     </script>
     <section class="shopping-cart">
 
         <h1 class="title">
             <?php  
-                if (empty($_SESSION['panier'])) echo "Vous n'avez pas de commandes";
+                if (empty($_SESSION['id'])  || count((new GestionCommande())->selectParClient($_SESSION['id'])) == 0  ) 
+                    echo "Vous n'avez pas de commandes";
                 else echo 'Vos commandes';
             ?>
 

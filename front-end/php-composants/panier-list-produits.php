@@ -20,7 +20,7 @@ if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
                 <div class="content">
                     <h3>' . $produit->nom . '</h3>
                     <form action="">
-                        <span>quantity :</span>
+                        <span>quantité :</span>
                         <input type="number" name="" value="'.$produitInfo['quantite'].'" id="">
                     </form>
                     <div class="price"> ' . sprintf("%.02f", ($produit->prix - (  ($produit->solde * $produit->prix )/100   ))) . ' DH <span>' . $produit->prix . ' DH</span> </div>

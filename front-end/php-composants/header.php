@@ -41,6 +41,7 @@
                         echo '<li><a href="inscription.php">s\'inscrire</a></li>';
                     }
                     else {
+                        echo '<li><a href="mon-compte.php">Mon compte</a></li>';
                         echo '<li><a href="php-help/deconnexion.php">se deconnecter</a></li>';
                     }
                     ?>

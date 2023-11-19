@@ -45,4 +45,57 @@ function cleanValidatorMotDePasse(){
 
 
 
+function erreurMotDePasse() {
+        
+    var inputMotDePasse = document.getElementById('mot_de_passe');
+    var url = window.location.href;
+    if(!url.includes("login.php?erreur"))
+        return ;
+
+    inputMotDePasse.setCustomValidity("Les mots de passe ou l'email ne correspondent pas.");
+    inputMotDePasse.reportValidity();
+    
+}
+function cleanValidatorMotDePasseLogin(){
+    var inputMotDePasse = document.getElementById('mot_de_passe');
+    inputMotDePasse.setCustomValidity("");
+}
+
+
+function validerMotDePasseMonCompte() {
+    
+    var inputMotDePasse = document.getElementById('new_mot_de_passe');
+    var inputConfirmerMotDePasse = document.getElementById('confirmer_new_mot_de_passe');
+    var motDePasse = inputMotDePasse.value;        
+    var confirmerMotDePasse = inputConfirmerMotDePasse.value;
+    
+    if (motDePasse.trim() === "" || confirmerMotDePasse.trim() === "") {
+        return true; 
+    }
+    if (motDePasse !== confirmerMotDePasse) {
+        inputConfirmerMotDePasse.setCustomValidity("Les mots de passe ne correspondent pas.");
+        inputConfirmerMotDePasse.reportValidity();
+        return false; 
+    }
+
+    return true; 
+}
+function cleanValidatorMotDePasseMonCompte(){
+    var inputMotDePasse = document.getElementById('confirmer_new_mot_de_passe');
+    inputMotDePasse.setCustomValidity("");
+}
+
+
+
+
+function voirProduit(titre, description) {
+  alertify.alert(titre, description, function(){ alertify.success('Ok'); })
+        .setting({
+            'label':'Ok',
+            'message' : description,
+            'onok': function(){ alertify.success('Ok'); }
+        }).setting('closable', false); ;
+    }
+
+erreurMotDePasse();
 

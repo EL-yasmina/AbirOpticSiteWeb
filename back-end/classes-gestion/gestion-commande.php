@@ -31,8 +31,7 @@
 
         public function selectParClient($idClient) {
             $this->connexionDb();
-            $sql = "SELECT * FROM commande WHERE id_client = " . $idClient ." ORDER BY date DESC";
-            echo $sql;
+            $sql = "SELECT * FROM commande WHERE id_client = " . $idClient ." ORDER BY date desc, status";
             $result = $this->db->query($sql);
             $commandes = array();
             if ($result->num_rows > 0) {
