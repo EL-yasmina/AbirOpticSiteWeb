@@ -31,18 +31,18 @@
 
     <section class="accueil">
 
-        <div class="slide active" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
+        <div class="slide active" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size:1.5em; border-radius:7px; border-style:double;">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size:1.5em; border-radius:5px;">
                 <h1>BIENVENUE CHEZ ABIR OPTIC</h1>
                 <h2>Votre vision, Notre passion!</h2>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
-        <div class="slide" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
+        <div class="slide" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px; border-style:double;">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:5px; border-style:dotted;">
                 <h4>CHEZ ABIR OPTIC<br>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h4>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
@@ -50,7 +50,7 @@
 
         <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; ">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:7px;border-style:double;">
+                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:5px; border-style:dotted;">
                 <h4>ABIR OPTIC <br>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
                 </h4>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>

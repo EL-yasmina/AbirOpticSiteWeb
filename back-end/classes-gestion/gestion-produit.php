@@ -4,7 +4,7 @@
         public function selectAvecId($id) {
             $this->connexionDb();
             $sql = "SELECT * FROM produit WHERE id = " . $id;
-            $result = $this->db->query($sql);
+            $result = $this->db->query($sql);//lancer la requet sql
             $produit = null;
             if ($result->num_rows > 0) {
                 $data = $result->fetch_assoc();
@@ -46,59 +46,61 @@
 
         public function insert($produit) {
             $this->connexionDb();
-            $query = "
+            $sql = "
                 INSERT INTO Produit (nom, quantite, image, solde, prix)
                 VALUES ('".$produit->nom."', ".$produit->quantite.", '".$produit->image."', 
                 ".$produit->solde.", ".$produit->prix.");";
-            echo $query;
-            $this->db->query($query);
+            echo $sql;
+            $this->db->query($sql);
             $this->fermerDb();
         }
 
-        public function update(Produit $produit) {
+        public function update($produit, $nom, $id, $quantite) {
             $this->connexionDb();
             $query = "
                 UPDATE Produit
-                SET nom = '".$produit->nom."', quantite = ".$produit->quantite.",  
+                SET nom = '".$nom."', quantite = ".$produit->quantite.",  
                 solde = ".$produit->solde.", prix = ".$produit->prix."
-                WHERE id = " . $produit->id;
-
+                WHERE id = " . $id;
+            /*$query = "
+                UPDATE Produit
+                SET nom = 'FAtiha', quantite = 120,  
+                solde = 00, prix = 12.99
+                WHERE id = 4";*/
             $this->db->query($query);
             $this->fermerDb();
         }
 
         private function convertToProduit($data) {
-            return new Produit(
-                $data['id'],
-                $data['nom'],
-                $data['quantite'],
-                $data['image'],
-                $data['solde'],
-                $data['prix'],
-                $data['description']
-            );
+            $produit = new Produit($data['id'],$data['nom'],$data['quantite'],$data['image'],$data['solde'],$data['prix'],$data['description']);
+            return $produit;
         }
 
     }
-    /* 
-    $gestionProduit = new GestionProduit();
+    
+    /* $gp = new GestionProduit();
 
     // Exemple d'utilisation de la classe GestionProduit
-    $produit = $gestionProduit->selectAvecId(1);
-    echo "Nom du produit : " . $produit->nom . "<br>";
+    $p = $gp->selectAvecId(1);
+    echo "Nom du produit : " . $p->nom . "<br>";
 
     //echo '<br/>';
     //$newProduit = new Produit(0, 'Nouveau Produit', 10, 'image.jpg', 0, 19.99);
-    //$gestionProduit->insert($newProduit);
+    //$gp->insert($newProduit);
     
     echo '<br/>';
-    $produit = $gestionProduit->selectAvecId(1);
-    $produit->nom = "Produit Mis à Jour";
-    $gestionProduit->update($produit);    
+    
+    $produit1 = $gp->selectAvecId(4);
+    $produit1->nom = "Produit Mis à Jour";
+    $produit1->quantite = 33;
+    $produit1->id = 8; 
+
+    $gp->update($produit1,"Fatiha",4,55);  
+
     echo "Nom du produit : " . $produit->nom . "<br>";
 
     echo '<br/>';
-    $produits = $gestionProduit->selectTout();
+    $produits = $g->selectTout();
     foreach ($produits as $produit) {
         echo "Nom du produit : " . $produit->nom . "<br>";
     }

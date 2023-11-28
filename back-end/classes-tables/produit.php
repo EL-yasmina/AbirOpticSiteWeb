@@ -3,7 +3,7 @@
         public $id;
         public $nom;
         public $quantite;
-        public $image;
+        public $image;//longblob : binaire 
         public $solde;
         public $prix;
         public $description;
