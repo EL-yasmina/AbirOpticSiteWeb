@@ -1,10 +1,13 @@
 <?php
     $gestionProduit = new GestionProduit();
     $produits = $gestionProduit->selectTout();
+
     if (count($produits) > 0) {
         foreach ($produits as $produit) {
             $imageData = $produit->image;
             $imageBase64 = base64_encode($imageData);
+
+            $imgAlt = htmlspecialchars($produit->nom);
 
             $html =  
             '<div class="box">
@@ -13,10 +16,10 @@
                         <a href="?ajouterAuPanier=' .$produit->id. '" class="fas fa-shopping-cart"></a>
                         <a  class="fas fa-eye" onclick="voirProduit(\''.$produit->nom.'\',\''. $produit->description .'\')"></a>
                     </div>
-                    <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $produit->nom . '">
+                    <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $imgAlt . '">    
                 </div>
                 <div class="content">
-                    <h3>' . $produit->nom . '</h3>
+                    <h3>' . htmlspecialchars($produit->nom) . '</h3>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>

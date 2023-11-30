@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="description" content="Découvrez Abir Optic: notre passion pour des lunettes de qualité, nos valeurs et services pour une expérience optique exceptionnelle.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qui sommes-nous</title>
 
@@ -66,46 +67,46 @@
     </section>
 
     <section class="center-section">
-        <h1 class=" title" style="margin-bottom: 0px;"> Pourquoi nous ? </h1>
+        <h2 class=" title" style="margin-bottom: 0px;"> Pourquoi nous ? </h2>
     </section>
 
     <section class="qui-sommes-nous">
         <div class="row">
             <div class="gallery">
-                <img src="images/lunettes-enfants.jpg" alt="enfant-lun" width="600" height="400">
+                <img src="images/lunettes-enfants.jpg" alt="lunettes-luxe" width="600" height="400">
                 </a>
                 <div class="desc">
-                    <h1>Qualité Supérieure:</h1>
+                    <h3>Qualité Supérieure:</h3>
                     <p>Nous ne compromettons jamais sur la qualité de nos produits. Vos yeux méritent le meilleur, c'est
                         pourquoi nous travaillons avec des marques réputées.</p>
                 </div>
             </div>
 
             <div class="gallery">
-                <img src="images/33.jpg" alt="Forest" width="600" height="400">
+                <img src="images/33.jpg" alt="lunettes-qualite" width="600" height="400">
                 </a>
                 <div class="desc">
-                    <h1>Prix Concurrentiels: </h1>
+                    <h3>Prix Concurrentiels: </h3>
                     <p>Chez Abir Optic, nous croyons que la qualité ne devrait pas être hors de portée. Profitez de nos
                         tarifs compétitifs sur toutes nos collections.</p>
                 </div>
             </div>
 
             <div class="gallery">
-                <img src="images/39.jpg" alt="Northern Lights" width="600" height="400">
+                <img src="images/39.jpg" alt="lunettes-tendances" width="600" height="400">
                 </a>
                 <div class="desc">
-                    <h1>Dernières Tendances:</h1>
+                    <h3>Dernières Tendances:</h3>
                     <p>Restez à la pointe de la mode avec notre sélection de montures et de lentilles. Nos experts vous
                         guideront pour trouver le look parfait.</p>
                 </div>
             </div>
 
             <div class="gallery">
-                <img src="images/GRAND-LUNETTES.jpg" alt="Mountains" width="600" height="400">
+                <img src="images/GRAND-LUNETTES.jpg" alt="lunettes" width="600" height="400">
                 </a>
                 <div class="desc">
-                    <h1>Service Exceptionnel:</h1>
+                    <h3>Service Exceptionnel:</h3>
                     <p>Nous engageons à offrir un service exceptionnel, rapide et efficace. Votre confort est notre
                         priorité, Faites confiance à Abir Optic pour une expérience de qualité.</p>
                 </div>

@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="description" content="Consultez nos Conditions Générales de Vente pour comprendre nos politiques et règlements en matière d'achat, de livraison et de retour.">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
 

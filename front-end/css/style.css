@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Open+Sans:wght@500&family=PT+Sans+Narrow&display=swap');
+
+
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family:'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -8,7 +11,6 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
 }
@@ -28,7 +30,7 @@ section {
 }
 
 .heading h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
 }
@@ -147,7 +149,7 @@ section {
 
 .header .icons div:hover,
 .header .icons a:hover {
-  color: #12CBC4;
+  color: #0077b6;
 }
 
 .header .search-form {
@@ -243,8 +245,8 @@ section {
   color: #333;
   display: block;
   font-size: 2rem;
-  -webkit-animation: fadeIn .4s linear .2s backwards;
-          animation: fadeIn .4s linear .2s backwards;
+  -webkit-animation: fadeIn .2s linear .2s backwards;
+          animation: fadeIn .2s linear .2s backwards;
 }
 
 .accueil .slide .content h3 {
@@ -257,8 +259,8 @@ section {
 }
 
 .accueil .slide .content .btn {
-  -webkit-animation: fadeIn .4s linear .6s backwards;
-          animation: fadeIn .4s linear .6s backwards;
+  -webkit-animation: fadeIn .3s linear .2s backwards;
+          animation: fadeIn .3s linear .2s backwards;
 }
 
 .accueil #next-slide,
@@ -266,12 +268,12 @@ section {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  height: 6rem;
-  width: 6rem;
-  line-height: 5.5rem;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
   font-size: 4rem;
-  color: rgb(35, 121, 201);
-  border: 0.2rem solid rgb(35, 121, 201);
+  color: #0077b6;
+  border: 0.2rem solid #0077b6;
   background: #fff;
   border-radius: .5rem;
   cursor: pointer;
@@ -280,7 +282,7 @@ section {
 
 .accueil #next-slide:hover,
 .accueil #prev-slide:hover {
-  background: #2e65db;
+  background: #023e8a;
   color: #fff;
 }
 
@@ -392,12 +394,15 @@ section {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: #333;
+  color: white;
+  background: rgb(35, 121, 201);
+  border-radius: 5%;
+  
 }
 
 .products .box-container .box .image .icons a:hover {
-  background: #333;
-  color: #fff;
+  background: #3a3a3a;
+  color: rgb(211, 211, 30);
 }
 
 .products .box-container .box .image img {
@@ -412,7 +417,7 @@ section {
 }
 
 .products .box-container .box .content h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
@@ -422,7 +427,7 @@ section {
 
 .products .box-container .box .content .stars i {
   font-size: 1.4rem;
-  color: #12CBC4;
+  color:  rgb(211, 211, 30);
 }
 
 .products .box-container .box .content .price {
@@ -889,19 +894,21 @@ section {
   font-size: 21px;
   color: yellow;
   height: 30px;
-  background-color: red;
-  opacity: 0.7;
+  background-color: #d00000;
+  /* opacity: 0.9; */
+  font-size: 2em;
   position: absolute;
   width: 100%;
-  /* align-items: center; */
+ 
   text-align: center;
   z-index: 1000;
 }
 .acheter-maintenant{
-  background-color: #E63946;
+  background-color: #d00000;
   color:white;
-  border-color: rgb(231, 52, 52);
-  opacity: 0.9;
+  font-size: 1.5em;
+  border-color: #d00000;
+  opacity: 0.8;
 }
 .margin-top-80{
   margin-top: 80%;
@@ -909,9 +916,9 @@ section {
 }
 
 .acheter-maintenant :hover{
-  background-color: rgb(65, 7, 7) !important;
-  color: rgb(56, 56, 5)!important;
-  border-color: rgb(238, 12, 12)!important;
+  background-color: rgb(241, 170, 170) !important;
+  color: rgb(180, 180, 70)!important;
+  border-color: #d00000!important;
 }
 .panel-heading {
   color: #fff !important;
@@ -952,7 +959,7 @@ div.desc {
 
 
 .selected-menu {
-  color: rgb(35, 121, 201) !important;
+  color:#457B9D !important;
  
   font-size: 18px !important;
   font-weight:bold;
@@ -1092,3 +1099,101 @@ legend {
   from {opacity: 0} 
   to {opacity: 1}
 }
+
+
+
+
+
+
+
+/*slide avis clients*/
+
+
+.slide-section {box-sizing: border-box}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 60px;
+  text-align: center;
+  background: linear-gradient(to left, #8ecae6,#caf0f8, #fff);
+  border-radius: 20px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 8px 8px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color:  rgb(53, 120, 183);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+   
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color:  #457B9D;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;
+   font-size: 18px;
+
+
+  }
+
+/* Add a blue color to the author */
+.author {color: #457B9D;
+        font-size: medium;
+        padding-top: 10px;
+      
+
+}
+
+

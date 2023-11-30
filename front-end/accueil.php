@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lunettes de vue et de soleil tendance pour hommes et femmes chez Abir Optic. Qualité et style réunis.">
+
     <title>Accueil</title>
 
     <!-- font awesome cdn link  -->
@@ -33,26 +35,27 @@
 
         <div class="slide active" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: #206c92; font-size:1.5em; border-radius:5px;">
-                <h1>BIENVENUE CHEZ ABIR OPTIC</h1>
-                <h2>Votre vision, Notre passion!</h2>
+                style="padding: 20px; background:  linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size:1.5em; border-radius:8px;">
+                <h1>Chez Abir Optic,</h1>
+                <h2>Lunettes de vue et de soleil stylées</h2>
+                
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
         <div class="slide" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:5px; border-style:dotted;">
-                <h4>CHEZ ABIR OPTIC<br>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h4>
+                style="padding: 20px; background:  linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size: 1.5em; border-radius:8px;  ">
+                <h2>CHEZ ABIR OPTIC,<br>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
         <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; ">
             <div class="content"
-                style="padding: 20px; background: rgba(243, 245, 243, 0.7); color: rgb(35, 121, 201); font-size: 1.5em; border-radius:5px; border-style:dotted;">
-                <h4>ABIR OPTIC <br>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
-                </h4>
+                style="padding: 20px; background: linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size: 1.5em; border-radius:8px;">
+                <h2>ABIR OPTIC, <br>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
+                </h2>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
@@ -112,9 +115,48 @@
 
     </section>
   
-    <section class="avis">
+    <!-- <section class="avis">
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <div class="elfsight-app-2856bc45-8642-47b3-8564-867b7cd10063" data-elfsight-app-lazy></div>
+
+    </section> -->
+
+    
+    
+    
+    
+    <section class="center-section">
+        <h2 class=" title" style="margin-bottom: 0px;"> Votre témoignages, notre fierté. </h2>
+    </section>
+    
+    <section class="slide-section">
+    <div class="slideshow-container">
+
+<div class="mySlides">
+  <q>Un bon service (serviable et disponible), qualité des produits (verres, lentilles...) Est magnifique.</q>
+  <p class="author">- Aicha EL Fakhari</p>
+</div>
+
+<div class="mySlides">
+  <q>Excellent service, un vaste choix de montures solaires et optiques, des prix abordables. À fortement recommander !</q>
+  <p class="author">- Abdellah Fakhri </p>
+</div>
+
+<div class="mySlides">
+  <q>Service parfait, à l'écoute, des lunettes de qualité... rien à dire.</q>
+  <p class="author">- Kawthar HAFSI</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
 
     </section>
 
