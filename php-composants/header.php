@@ -10,8 +10,8 @@
 
     <nav class="navbar">
         <ul>
-            <li><a id="accueil" href="accueil.php">accueil</a></li>
-            <li><a id="produits" href="produits.php">produits</a></li>
+            <li><a id="accueil" href="accueil.php">Accueil</a></li>
+            <li><a id="produits" href="produits.php">Produits</a></li>
             <?php
                 if (isset($_SESSION['nom'])) {
                     echo '<li><a id="commandes" href="commandes.php">commandes</a></li>';
@@ -19,7 +19,7 @@
             ?>
             
             <li><a id="qui-sommes-nous" href="qui-sommes-nous.php">Qui sommes-nous</a></li>
-            <li><a id="contact" href="contact.php">contact</a></li>
+            <li><a id="contact" href="contact.php">Contact</a></li>
             <li>
                 <a href="#" id="user-menu">
                     <?php
@@ -37,12 +37,12 @@
                     <?php
                     // Afficher les liens de connexion et d'inscription si l'utilisateur n'est pas connecté
                     if (!isset($_SESSION['nom'])) {
-                        echo '<li><a href="login.php">se connecter</a></li>';
-                        echo '<li><a href="inscription.php">s\'inscrire</a></li>';
+                        echo '<li><a href="login.php">Se connecter</a></li>';
+                        echo '<li><a href="inscription.php">S\'inscrire</a></li>';
                     }
                     else {
                         echo '<li><a href="mon-compte.php">Mon compte</a></li>';
-                        echo '<li><a href="php-help/deconnexion.php">se deconnecter</a></li>';
+                        echo '<li><a href="php-help/deconnexion.php">Se deconnecter</a></li>';
                     }
                     ?>
                 </ul>

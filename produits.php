@@ -40,7 +40,7 @@
 <body>
 
     <?php 
-        include('../back-end/back-end.php');
+        include('back-end/back-end.php');
         include('php-help/session.php');
         include('php-help/ajouter-panier.php');
         include('php-composants/header.php'); 
