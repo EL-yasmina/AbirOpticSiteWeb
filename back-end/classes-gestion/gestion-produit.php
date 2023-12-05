@@ -3,13 +3,21 @@
 
         public function selectAvecId($id) {
             $this->connexionDb();
-            $sql = "SELECT * FROM produit WHERE id = " . $id;
-            $result = $this->db->query($sql);//lancer la requet sql
+            $sql = "SELECT * FROM produit WHERE id = ?";
+
+            $statement = $this->db->prepare($sql);
+            $statement->bind_param("i", $id);
+
+            $statement->execute();
+        
             $produit = null;
+            $result = $statement->get_result();
+            
             if ($result->num_rows > 0) {
                 $data = $result->fetch_assoc();
                 $produit = $this->convertToProduit($data);
             }
+        
             $this->fermerDb();
             return $produit;
         }
@@ -44,32 +52,32 @@
             return $produits;
         }
 
-        public function insert($produit) {
-            $this->connexionDb();
-            $sql = "
-                INSERT INTO Produit (nom, quantite, image, solde, prix)
-                VALUES ('".$produit->nom."', ".$produit->quantite.", '".$produit->image."', 
-                ".$produit->solde.", ".$produit->prix.");";
-            echo $sql;
-            $this->db->query($sql);
-            $this->fermerDb();
-        }
+        // public function insert($produit) {
+        //     $this->connexionDb();
+        //     $sql = "
+        //         INSERT INTO Produit (nom, quantite, image, solde, prix)
+        //         VALUES ('".$produit->nom."', ".$produit->quantite.", '".$produit->image."', 
+        //         ".$produit->solde.", ".$produit->prix.");";
+        //     echo $sql;
+        //     $this->db->query($sql);
+        //     $this->fermerDb();
+        // }
 
-        public function update($produit, $nom, $id, $quantite) {
-            $this->connexionDb();
-            $query = "
-                UPDATE Produit
-                SET nom = '".$nom."', quantite = ".$produit->quantite.",  
-                solde = ".$produit->solde.", prix = ".$produit->prix."
-                WHERE id = " . $id;
-            /*$query = "
-                UPDATE Produit
-                SET nom = 'FAtiha', quantite = 120,  
-                solde = 00, prix = 12.99
-                WHERE id = 4";*/
-            $this->db->query($query);
-            $this->fermerDb();
-        }
+        // public function update($produit, $nom, $id, $quantite) {
+        //     $this->connexionDb();
+        //     $query = "
+        //         UPDATE Produit
+        //         SET nom = '".$nom."', quantite = ".$produit->quantite.",  
+        //         solde = ".$produit->solde.", prix = ".$produit->prix."
+        //         WHERE id = " . $id;
+        //     // /*$query = "
+            //     UPDATE Produit
+            //     SET nom = 'FAtiha', quantite = 120,  
+            //     solde = 00, prix = 12.99
+            //     WHERE id = 4";*/
+        //     $this->db->query($query);
+        //     $this->fermerDb();
+        // }
 
         private function convertToProduit($data) {
             $produit = new Produit($data['id'],$data['nom'],$data['quantite'],$data['image'],$data['solde'],$data['prix'],$data['description']);

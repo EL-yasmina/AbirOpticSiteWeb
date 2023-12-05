@@ -3,12 +3,24 @@
     
         public function selectAvecEmailEtPassword($email, $password) {
             $this->connexionDb();
-            $sql = "SELECT * FROM client WHERE email ='" .$email. "' AND password = '".$password."'";
-            $result = $this->db->query($sql);
+            $sql = "SELECT * FROM client WHERE email = ?";
+            $statement = $this->db->prepare($sql);
+            $statement->bind_param("s", $email);  //"s" pour indiquer que ce sont des chaînes de caractères , bind_param() methode qui lie la valeur de l'email aux param de la requete:
+            $statement->execute();
+
+            $result = $statement->get_result();
             $client = null;
+
             if ($result->num_rows > 0) {
                 $data = $result->fetch_assoc();
-                $client = $this->convertToClient($data);
+                $hashedPasswordFromDb = $data['password'];
+                
+                if(password_verify($password, $hashedPasswordFromDb)){  //verification de mot de passe haché
+
+                    $client = $this->convertToClient($data);
+
+                }
+                
             }
             $this->fermerDb();
             return $client;
@@ -16,11 +28,18 @@
         
         public function selectAvecId($id) {
             $this->connexionDb();
-            $sql = "SELECT * FROM client WHERE id = ".$id;
-            $result = $this->db->query($sql);
+            $sql = "SELECT * FROM client WHERE id = ?"; 
+
+            $statement = $this->db->prepare($sql);
+            $statement->bind_param("i", $id); //"i" pour indiquer que $id est un entier
+            $statement->execute();
+
+            $result = $statement->get_result();
             $client = null;
+
+           
             if ($result->num_rows > 0) {
-                $data = $result->fetch_assoc();
+                $data = $result->fetch_assoc();// recuperer l'element suivant
                 $client = $this->convertToClient($data);
             }
             $this->fermerDb();
@@ -29,8 +48,14 @@
 
         public function emailExist($email) {
             $this->connexionDb();
-            $sql = "SELECT * FROM client WHERE email = '".$email."'";
-            $result = $this->db->query($sql);
+            $sql = "SELECT * FROM client WHERE email = ?";
+
+            $statement = $this->db->prepare($sql);
+            $statement->bind_param("s", $email);   
+            $statement->execute();
+
+            $result = $statement->get_result();
+
             $this->fermerDb();            
             return $result->num_rows > 0;
         }
@@ -38,10 +63,15 @@
         public function selectTout() {
             $this->connexionDb();
             $query = "SELECT * FROM client";
-            $result = $this->db->query($query);
+            
+            $statement = $this->db->prepare($query);
+            $statement->execute();
+
+            $result = $statement->get_result();
             $clients = array();
+
             if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
+                while ($row = $result->fetch_assoc()) {   //fetch_assoc pour extraire une ligne de résultas sous forme de tableau associatif
                     $client =  $this->convertToClient($row);
                     $clients[] = $client;
                 }
@@ -53,24 +83,49 @@
         public function insert($client) {
             $this->connexionDb();
             $query = "
-                INSERT INTO Client (nom, prenom, sexe, email, telephone, adresse, ville, password)
-                VALUES ('".$client->nom."', '".$client->prenom."', '".$client->sexe."', '".$client->email."', 
-                '".$client->telephone."', '".$client->adresse."', '".$client->ville."', '".$client->password."');";
+                INSERT INTO client (nom, prenom, sexe, email, telephone, adresse, ville, password)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+            $hashedPassword = password_hash($client->password, PASSWORD_DEFAULT);  //hachage de mot de passe  
+
+            $statement = $this->db->prepare($query);
+            $statement-> execute([
+                $client->nom,
+                $client->prenom,
+                $client->sexe,
+                $client->email,
+                $client->telephone,
+                $client->adresse,
+                $client->ville,
+                $hashedPassword,  //ici j'ai utilisé le mot passe haché
                 
-            $this->db->query($query);
+            ]);
             $this->fermerDb();
         }
 
         public function update(Client $client) {
             $this->connexionDb();
             $query = "
-                UPDATE Client
-                SET nom = '".$client->nom."', prenom = '".$client->prenom."', sexe = '".$client->sexe."', 
-                email = '".$client->email."', telephone = '".$client->telephone."', adresse = '".$client->adresse."', 
-                ville = '".$client->ville."', password = '".$client->password."'
-                WHERE id = " . $client->id;
-            
-            $this->db->query($query);
+                UPDATE client
+                SET nom = ?, prenom = ?, sexe = ?, 
+                email = ?, telephone = ?, adresse = ?, 
+                ville = ?, password = ?
+                WHERE id = ?" ;
+
+            $hashedPassword = password_hash($client->password, PASSWORD_DEFAULT);
+
+            $statement = $this->db->prepare($query);
+            $statement->execute([
+                $client->nom,
+                $client->prenom,
+                $client->sexe,
+                $client->email,
+                $client->telephone,
+                $client->adresse,
+                $client->ville,
+                $hashedPassword,
+                $client->id,
+            ]);
             $this->fermerDb();
         }
 
@@ -84,7 +139,8 @@
                 $data['telephone'],
                 $data['adresse'],
                 $data['ville'],
-                $data['password']
+                password_hash($data['password'], PASSWORD_DEFAULT)
+                // $data['password']
             );
         }
 

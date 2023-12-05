@@ -1,7 +1,7 @@
 <?php
     // inclure les fichiers nécessaires
     include('session.php');
-    include('../../back-end/back-end.php');
+    include('../back-end/back-end.php');
 
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -11,8 +11,10 @@
     $ville = $_POST['ville'];
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
+    
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT); //hachage de mot de passe
 
-    $nouveauClient = new Client(0, $nom, $prenom, $sexe, $email, $telephone, $adresse, $ville, $password);
+    $nouveauClient = new Client(0, $nom, $prenom, $sexe, $email, $telephone, $adresse, $ville, $passwordHash);
     $gestionClient = new GestionClient();
 
     $clientExistant = $gestionClient->emailExist($email);
@@ -25,7 +27,7 @@
     
     $gestionClient->insert($nouveauClient);
 
-    $client = $gestionClient->selectAvecEmailEtPassword($email,$password);    
+    $client = $gestionClient->selectAvecEmailEtPassword($email);    
 
     $_SESSION['id'] = $client->id;
     $_SESSION['nom'] = $client->nom;

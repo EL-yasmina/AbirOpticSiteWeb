@@ -1196,4 +1196,58 @@ q {font-style: italic;
 
 }
 
+.description {
+  display: none;
+ 
+}
+.description.show {
+  display: block;
+}
+.description p{
+  text-align:center;
+  font-size: 1.5;
+  color: white;
+  padding-top: 20px;
+}
 
+
+.slogan {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: rgb(215, 228, 245);
+  
+  
+}
+
+.slogan-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color:#023e8a;
+  animation: fadeInUp 1.5s ease both;
+}
+
+.slogan-description {
+  font-size: 2em;
+  color: #444;
+  animation: fadeInUp 1.5s ease 0.5s both;
+  text-align: justify;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.slogan-image img {
+    max-width: 50%;
+    height: 50%;
+    margin-left: 20px; /* Ajustez selon l'espace désiré entre le texte et l'image */
+    margin-top: 20px;
+    border-radius: 5px;
+}

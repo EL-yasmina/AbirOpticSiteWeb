@@ -136,4 +136,25 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-}
+};
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const icons = document.querySelectorAll('.icons');
+
+    icons.forEach(icon => {
+        const description = icon.querySelector('.description');
+
+        icon.addEventListener('click', () => {
+            // Toggle de la classe 'show' pour afficher ou masquer la description
+            description.classList.toggle('show');
+        });
+    });
+});
+
+
+
+

@@ -1,6 +1,6 @@
 <?php
 
-    include('../../back-end/back-end.php');
+    include('../back-end/back-end.php');
     include('session.php');
     $_SESSION['page'] = 'panier.php';
     

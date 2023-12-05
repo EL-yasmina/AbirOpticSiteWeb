@@ -73,6 +73,19 @@
         <?php  include('php-composants/accueil-top-3-produits.php'); ?>
     </section>
 
+    <section class="slogan">
+        <div class="slogan-content">
+            <div class="slogan-text">
+               <h2 class="slogan-title">Votre vision, notre passion.</h2>
+               <p class="slogan-description">Chez Abir Optic, nous nous engageons à transformer votre vision en une expérience unique. Notre dévouement pour offrir des solutions optiques exceptionnelles se reflète dans chaque détail, car pour nous, votre clarté visuelle est une priorité absolue.</p>
+
+            </div>
+            <div class="slogan-image">
+                <img src="images/test.jpg" alt="lunettes tendances femmes hommes">
+            </div>
+        </div>
+    </section>
+
     <section class="center-section">
         <h2 class=" title" style="margin-bottom: 0px;"> Nos services </h2>
     </section>
@@ -82,29 +95,55 @@
             <div class="icons">
                 <img src="images/icon-1.png" alt="">
                 <h3>Examen de la vue professionnelle</h3>
+                <div class="description">
+                    <p>Chez Abir Optic, nos examens de vue précis et personnalisés garantissent 
+                        des corrections optiques adaptées à chaque individu. Grâce à nos technologies avancées,
+                         bénéficiez d'une vision claire et confortable pour un quotidien sans compromis.</p>
+                </div>
 
 
             </div>
 
 
             <div class="icons">
-                <img src="images/icon-2.png" alt="">
-                <h3>Lunettes & Lentilles de qualité</h3>
+                <img src="images/444.png" alt="">
+                <h3>Cash en Dilevery</h3>
+                <div class="description">
+                    <p>Le service de cash en delivery chez Abir Optic simplifie votre achat.
+                         Recevez et payez vos commandes directement à la livraison, vous offrant
+                          commodité et tranquillité d'esprit pour vos acquisitions optiques.
+                           Notre mode de paiement sécurisé assure une transaction fluide et fiable à chaque commande.</p>
+                </div>
             </div>
 
             <div class="icons">
                 <img src="images/icon-5.png" alt="">
                 <h3>1 Ans de Garantie montures et verres</h3>
+                <div class="description">
+                    <p>Chez Abir Optic, nous garantissons la qualité de nos produits avec une garantie d'un an.
+                         Votre satisfaction et la durabilité de vos lunettes sont notre priorité,
+                          vous offrant tranquillité d'esprit et confiance dans votre investissement optique.</p>
+                </div>
             </div>
 
             <div class="icons">
                 <img src="images/icon-4.png" alt="">
                 <h3>Entretien et Réparation</h3>
+                <div class="description">
+                    <p>Abir Optic assure l'entretien et la réparation de vos lunettes avec expertise.
+                         Notre service dédié veille à ce que vos montures restent en parfait état,
+                          assurant durabilité et confort visuel pour une vision sans compromis.</p>
+                </div>
             </div>
 
             <div class="icons">
                 <img src="images/icon-3.png" alt="">
                 <h3>Conseils de Mode Optique</h3>
+                <div class="description">
+                    <p>Chez Abir Optic, nos conseils en mode optique vous guident vers un choix de lunettes parfaitement
+                         adapté à votre style et vos besoins visuels. Découvrez une gamme diversifiée de montures élégantes
+                          et fonctionnelles, alliant tendance et confort pour une vision qui vous ressemble.</p>
+                </div>
             </div>
 
 
