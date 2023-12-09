@@ -34,14 +34,12 @@
         <h1>Qui sommes-nous</h1>
         <p> <a href="accueil.php">accueil</a> >> Qui sommes-nous</p>
     </section>
-    <section class="qui-sommes-nous">
+    <section class="qui-sommes-nous" style="background-color:#EBEEF2">
         <div class="row">
-            <div class="image">
-                <img src="images/47.jpg" alt="" height="550" width="1000">
-            </div>
-
+            
+            <!-- height="550" width="1000" -->
             <div class="content">
-                <p><span style="font-size:large; color: #2F6690;"> ABIR</span> est une opticienne optométriste
+                <p><span style=" color: #2F6690;"> ABIR</span> est une opticienne optométriste
                     passionnée qui a apporté son expertise et
                     son engagement à l'optique depuis de nombreuses années. Avec une expérience solide dans l'industrie,
                     elle a
@@ -49,7 +47,7 @@
                     de haute
                     qualité.
                 </p><br>
-                <p><span style="font-size:large; color: #2F6690;">ABIR OPTIC: </span> Votre Destination Optique de
+                <p><span style=" color: #2F6690;">ABIR OPTIC: </span> Votre Destination Optique de
                     Confiance.<br>
 
                     Situé au cœur de Zegangane, nous sommes fiers de servir notre communauté avec une vaste gamme de
@@ -62,6 +60,10 @@
                 </p>
                 <p>L'achat en ligne de vos lentilles de contact et de vos lunettes chez Abir Optic vous offre un choix
                     illimité parmi une variété de produits de qualité.</p>
+                    <a href="contact.php" class="btn-nousContacter">Nous contacter</a>
+            </div>
+            <div class="image">
+                <img src="images/37.png" alt="abir-optic" max-height="300px"  >
             </div>
         </div>
     </section>
@@ -71,8 +73,8 @@
     </section>
 
     <section class="qui-sommes-nous">
-        <div class="row">
-            <div class="gallery">
+        <div class="quisommeNrow">
+            <div class="pourquoi-nous">
                 <img src="images/lunettes-enfants.jpg" alt="lunettes-luxe" width="600" height="400">
                 </a>
                 <div class="desc">
@@ -82,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="gallery">
+            <div class="pourquoi-nous">
                 <img src="images/33.jpg" alt="lunettes-qualite" width="600" height="400">
                 </a>
                 <div class="desc">
@@ -92,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="gallery">
+            <div class="pourquoi-nous">
                 <img src="images/39.jpg" alt="lunettes-tendances" width="600" height="400">
                 </a>
                 <div class="desc">
@@ -102,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="gallery">
+            <div class="pourquoi-nous">
                 <img src="images/GRAND-LUNETTES.jpg" alt="lunettes" width="600" height="400">
                 </a>
                 <div class="desc">

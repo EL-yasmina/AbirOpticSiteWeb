@@ -1,18 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Open+Sans:wght@500&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 
 * {
-  font-family:'Open Sans', sans-serif;
+  /* font-family:'Roboto', sans-serif; */
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+   box-sizing: border-box;
   text-decoration: none;
   outline: none;
   border: none;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
+  
 }
 
 html {
@@ -31,6 +34,7 @@ section {
 
 .heading h1 {
   font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   color: #fff;
 }
@@ -39,6 +43,7 @@ section {
   color: #fff;
   padding-top: .7rem;
   font-size: 1.7rem;
+  font-family:'Roboto', sans-serif;
 }
 
 .heading p a {
@@ -50,6 +55,7 @@ section {
 }
 
 .title {
+  font-family:'Montserrat', sans-serif;
   font-size: 3rem;
   color: #333333;
   margin-bottom: 2rem;
@@ -69,10 +75,10 @@ section {
   border-radius: .5rem;
 }
 
-.btn:hover {
+/* .btn:hover {
   background: #333;
   color: #fff;
-}
+} */
 
 .header {
   position: -webkit-sticky;
@@ -117,14 +123,15 @@ section {
 }
 
 .header .navbar ul li a {
-  font-size: 1.7rem;
-  color: #666;
+  font-size: 2em;
+  color: #0d0d0d;
   padding: 2rem;
   display: block;
 }
 
 .header .navbar ul li a:hover {
-  background: #eee;
+  background: #162D59;
+  color: #EBEEF2;
 }
 
 .header .navbar ul li ul {
@@ -250,10 +257,11 @@ section {
 }
 
 .accueil .slide .content h3 {
-  color: #333;
+  color: #cfc4c4;
   text-transform: uppercase;
   padding: 1rem 0;
   font-size: 6rem;
+  font-family:'Montserrat', sans-serif;
   -webkit-animation: fadeIn .4s linear .4s backwards;
           animation: fadeIn .4s linear .4s backwards;
 }
@@ -263,6 +271,15 @@ section {
           animation: fadeIn .3s linear .2s backwards;
 }
 
+.accueil .content h2{
+  color: white;
+  font-weight:lighter;
+  font-family:'Merriweather', serif;
+  font-size:3em;
+  background-color: #5a75a9;
+  opacity: 0.8;
+  border-radius: 3px;
+}
 .accueil #next-slide,
 .accueil #prev-slide {
   position: absolute;
@@ -273,7 +290,7 @@ section {
   line-height: 5rem;
   font-size: 4rem;
   color: #0077b6;
-  border: 0.2rem solid #0077b6;
+  border: 0.2rem solid #95D0E0;
   background: #fff;
   border-radius: .5rem;
   cursor: pointer;
@@ -282,7 +299,7 @@ section {
 
 .accueil #next-slide:hover,
 .accueil #prev-slide:hover {
-  background: #023e8a;
+  background: #0367A6;
   color: #fff;
 }
 
@@ -337,8 +354,19 @@ section {
 }
 
 .banner .box .content .btn {
-  padding: .6rem 2rem;
+  background-color: #0367A6;
+  color: white;
+  text-align: center;
+  display: inline-block;
   font-size: 1.5rem;
+  font-family: 'Merriweather' , serif;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.banner .box .content .btn:hover{
+  background-color: #95D0E0;
+  color: white
 }
 
 .products .box-container {
@@ -418,7 +446,9 @@ section {
 
 .products .box-container .box .content h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: #0d0d0d;
+  font-family:'Merriweather',serif;
+ 
 }
 
 .products .box-container .box .content .stars {
@@ -427,12 +457,12 @@ section {
 
 .products .box-container .box .content .stars i {
   font-size: 1.4rem;
-  color:  rgb(211, 211, 30);
+  color:  rgb(240, 240, 16);
 }
 
 .products .box-container .box .content .price {
   font-size: 2.2rem;
-  color: #333;
+  color: #0d0d0d;
 }
 
 .products .box-container .box .content .price span {
@@ -460,10 +490,38 @@ section {
 }
 
 .qui-sommes-nous .row .image img {
-  width: 100%;
-  border-radius: .5rem;
+  width:auto;
+  height: auto;
+ max-width: 100%;
+  /* border-radius: .4rem; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 6px 6px 8px #162D59;
+  
 }
-
+.btn-nousContacter{
+      /* opacity: 0.8; */
+      background-color: #0367A6;
+      color: white;
+      text-align: center;
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 2.8rem;
+      font-size: 2em;
+      font-family: 'Merriweather', serif;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px; 
+      
+}
+.btn-nousContacter:hover{
+  background-color: #95D0E0;
+      color: white;
+}
 .aqui-sommes-nous .row .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
@@ -472,15 +530,23 @@ section {
 
 .qui-sommes-nous .row .content h3 {
   font-size: 3.5rem;
-  color: #333;
+  color: #0d0d0d;
   line-height: 2;
+  font-family:'Merriwaether',serif;
 }
 
 .qui-sommes-nous .row .content p {
-  font-size: 1.4rem;
-  line-height: 2.5;
-  color: #666;
+  font-family:'Roboto', sans-serif;
+  font-size: 2em;
+  line-height: 1.5;
+  color: #0d0d0d;
   padding: 1rem 0;
+  text-align:justify;
+
+  max-width: 700px; /* Définir la largeur maximale */
+  margin-left: auto; /* Centrer horizontalement */
+  margin-right: auto;
+  
 }
 
 .qui-sommes-nous .icons-container {
@@ -495,13 +561,13 @@ section {
 .qui-sommes-nous .icons-container .icons {
   padding: 3rem 2rem;
   border-radius: .5rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #162D59;
   text-align: center;
   cursor: pointer;
 }
 
 .qui-sommes-nous .icons-container .icons:hover {
-  background: rgb(35, 121, 201);
+  background: #0367A6;
 }
 
 .qui-sommes-nous .icons-container .icons:hover img {
@@ -510,17 +576,28 @@ section {
 }
 
 .qui-sommes-nous .icons-container .icons:hover h3 {
-  color: #fff;
+  color: #EBEEF2;
 }
 
 .qui-sommes-nous .icons-container .icons img {
   height: 7rem;
   margin-bottom: 1rem;
 }
-
+.qui-sommes-nous .icons-container .icons div p {
+  color: #0d0d0d;
+  font-family:'Roboto', sans-serif;
+  font-size: medium;
+  text-align:start;
+  hyphens: auto; 
+  letter-spacing: 2px;
+}
+.qui-sommes-nous .icons-container .icons:hover div p {
+  color: #fff;
+}
 .qui-sommes-nous .icons-container .icons h3 {
   font-size: 1.7rem;
-  color: #333;
+  color: #0d0d0d;
+  font-family: 'Merriweather' serif;
 }
 
 
@@ -549,7 +626,7 @@ section {
 
 .contact .row form .box, .contact .row form textarea {
   width: 100%;
-  border-bottom: 0.2rem solid #333;
+  border-bottom: 0.2rem solid #0d0d0d;
   margin-bottom: 1rem;
   padding: 1rem 0;
   font-size: 1.6rem;
@@ -561,7 +638,30 @@ section {
   height: 15rem;
   resize: none;
 }
+.contact .row .btn{
+  /* background-color: #0367A6;
+  border: #0367A6; */
+  background-color: #0367A6;
+  color: white;
+  text-align: center;
 
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  font-size: 1.5rem;
+  font-family: initial;
+
+  border: 0.2rem solid #0367A6;
+ 
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.contact .row .btn:hover{
+  background-color: #95D0E0;
+  color: #0d0d0d;
+  font-size:1.5rem;
+  font-weight: bold;
+}
 .contact .row .map {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
@@ -586,6 +686,7 @@ section {
   text-transform: uppercase;
   color: #333;
   margin-bottom: .7rem;
+  font-family: 'Merriweather' serif;
 }
 
 .login-form form .inputBox,
@@ -649,7 +750,7 @@ section {
 
 .login-form form .flex a:hover,
 .register-form form .flex a:hover {
-  color: #12CBC4;
+  color: #95D5EE;
 }
 
 .login-form form input[type="submit"],
@@ -660,7 +761,7 @@ section {
 
 .login-form form input[type="submit"]:hover,
 .register-form form input[type="submit"]:hover {
-  background: #12CBC4;
+  background: #95D5EE;
 }
 
 .login-form form .btn,
@@ -712,6 +813,7 @@ section {
   font-size: 1.7rem;
   padding-bottom: .5rem;
   color: #333;
+  font-family: 'Merriweather' serif;
 }
 
 .shopping-cart .box-container .box .content form {
@@ -723,6 +825,7 @@ section {
           align-items: center;
   gap: .5rem;
   padding: 1rem 0;
+  font-family: 'Roboto' sans-serif;
 }
 
 .shopping-cart .box-container .box .content form span {
@@ -753,82 +856,48 @@ section {
 .shopping-cart .cart-total {
   padding: 2rem;
   border-radius: .5rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #0367A6;
 }
 
 .shopping-cart .cart-total h3 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #333;
+  color: #0d0d0d;
+  font-family: 'Merriweather' serif;
 }
 
 .shopping-cart .cart-total h3 span {
-  color: #12CBC4;
+  color: #0367A6;
 }
 
-.footer .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.5rem;
+.cart-total .btn{
+  background-color: #0367A6;
+  border: #0367A6;
+  font-family: 'Merriweather' serif;
+
 }
 
-.footer .box-container .box h3 {
-  font-size: 2.2rem;
-  color: #333;
-  padding: 1rem 0;
-}
 
-.footer .box-container .box a {
-  display: block;
-  font-size: 1.4rem;
-  color: #666;
-  padding: 1rem 0;
-}
 
-.footer .box-container .box a:hover {
-  color: #12CBC4;
-}
 
-.footer .box-container .box a:hover i {
-  padding-right: 2rem;
-}
 
-.footer .box-container .box a i {
-  color: #12CBC4;
-  padding-right: .5rem;
-}
 
-.footer .box-container .box p {
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
 
-.footer .box-container .box form input[type="email"] {
-  width: 100%;
-  padding: 1rem 1.2rem;
-  border-radius: .5rem;
-  background: #eee;
-  font-size: 1.6rem;
-  text-transform: none;
-  margin: .5rem 0;
-}
-
-.footer .credit {
+.footer {
+  font-family:'Merriweather', serif;
   text-align: center;
   padding: 1rem;
   padding-top: 2.5rem;
   margin-top: 2.5rem;
   font-size: 2rem;
-  color: #666;
-  border-top: 0.2rem solid #333;
+  color: #0d0d0d;
+  
+  background-color: #EBEEF2;
+  width: 100%;
+  
 }
 
-.footer .credit span a{
-  color: #12CBC4;
-}
+
 
 @media (max-width: 1200px) {
   html {
@@ -878,8 +947,10 @@ section {
   html {
     font-size: 50%;
   }
-  .accueil .slide .content h3 {
-    font-size: 4rem;
+  .accueil .slide .content h2 {
+    font-size: 2rem;
+    font-family: 'Montserrat' ,sans-serif;
+   
   }
   .shopping-cart .box-container .box {
     -webkit-box-orient: vertical;
@@ -891,6 +962,8 @@ section {
 /*# sourceMappingURL=style.css.map */
 
 .solde{
+  font-family:'Merriweather', serif;
+
   font-size: 21px;
   color: yellow;
   height: 30px;
@@ -904,11 +977,26 @@ section {
   z-index: 1000;
 }
 .acheter-maintenant{
-  background-color: #d00000;
+  /* background-color: #162D59;
   color:white;
   font-size: 1.5em;
-  border-color: #d00000;
-  opacity: 0.8;
+  border-color: #162D59; */
+  /* opacity: 0.8; */
+
+  background-color: #0367A6;
+  color: white;
+  text-align: center;
+
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .8rem 2.8rem;
+  font-size: 2em;
+  font-family: 'Merriweather', serif;
+
+  border: 0.2rem solid #0367A6;
+ 
+  cursor: pointer;
+  border-radius: .5rem;
 }
 .margin-top-80{
   margin-top: 80%;
@@ -916,13 +1004,13 @@ section {
 }
 
 .acheter-maintenant :hover{
-  background-color: rgb(241, 170, 170) !important;
-  color: rgb(180, 180, 70)!important;
-  border-color: #d00000!important;
+  background-color: #95D5EE;
+  color: black;
+  border-color: #95D5EE;
 }
 .panel-heading {
   color: #fff !important;
-  background-color: #4eaedb !important;
+  background-color: #0b7cc3 !important;
   padding: 25px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 0px;
@@ -933,27 +1021,41 @@ section {
 }
 
 
-
-div.gallery {
-  border: 0.5px solid #ccc;
-  float: left;
+.quisommeNrow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+div.pourquoi-nous {
+  border: 2px solid #142954;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   width: 250px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pour centrer le contenu horizontalement */
+  text-align: center; /* Pour centrer le texte */
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+div.pourquoi-nous:hover {
+  border: 2px solid #95D5EE;
+  transform: scale(1.05);
 }
 
-div.gallery img {
+div.pourquoi-nous img {
   width: 100%;
   height: auto;
 }
 
 div.desc {
-  padding: 10px;
+  padding: 20px;
   text-align: justify;
-  font-size:small;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-size: 16px;
+  font-family: 'Motserrat', sans-serif;
 }
 
 
@@ -1124,8 +1226,10 @@ legend {
   display: none;
   padding: 60px;
   text-align: center;
-  background: linear-gradient(to left, #8ecae6,#caf0f8, #fff);
+  background: linear-gradient(to right, #354F69,#87D0DE, #384e52);
   border-radius: 20px;
+  color: white;
+  font-family: 'Merriweather', serif;
 }
 
 /* Next & previous buttons */
@@ -1136,24 +1240,24 @@ legend {
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  color: #888;
+  color: #EBEEF2;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 8px 8px 0;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+
 .next {
   position: absolute;
   right: 0;
   border-radius: 8px 0 0 8px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+
 .prev:hover, .next:hover {
-  background-color:  rgb(53, 120, 183);
-  color: white;
+  background-color:  #0367A6;
+  color: #EBEEF2;
 }
 
 /* The dot/bullet/indicator container */
@@ -1170,7 +1274,7 @@ legend {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #d9d7d7;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -1178,7 +1282,7 @@ legend {
 
 /* Add a background color to the active dot/circle */
 .active, .dot:hover {
-  background-color:  #457B9D;
+  background-color:  #0367A6;
 }
 
 /* Add an italic font style to all quotes */
@@ -1198,12 +1302,9 @@ q {font-style: italic;
 
 .description {
   display: none;
- 
-}
-.description.show {
-  display: block;
 }
 .description p{
+  font-family: 'Roboto', sans-serif;
   text-align:center;
   font-size: 1.5;
   color: white;
@@ -1213,26 +1314,47 @@ q {font-style: italic;
 
 .slogan {
   text-align: center;
-  padding: 10px 20px;
-  background-color: rgb(215, 228, 245);
+  padding: 40px 40px;
+ 
   
   
 }
 
 .slogan-title {
+  font-family: 'Merriweather', serif;
   font-size: 2.5em;
   margin-bottom: 20px;
-  color:#023e8a;
+  color:#0d0d0d;
   animation: fadeInUp 1.5s ease both;
+  
+  
 }
 
 .slogan-description {
   font-size: 2em;
-  color: #444;
+  color: #4B6576;
   animation: fadeInUp 1.5s ease 0.5s both;
-  text-align: justify;
+  text-align: center;
+  padding: 0 90px;
 }
+.btn-slogan{
+  background-color: #0367A6;
+  color: white;
+  text-align: center;
 
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: 'Montserrat' sans-serif;
+
+  border: 0.2rem solid #0367A6;
+ 
+  cursor: pointer;
+  border-radius: .5rem;
+  
+}
 @keyframes fadeInUp {
   0% {
       opacity: 0;

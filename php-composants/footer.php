@@ -1,5 +1,5 @@
 <section class="footer">
-    <div class="credit">
+    <div class="footer-st">
         <div>
             <p>&copy; 2023 Abir optic - Tout droit réservés</p>
             <a href="mentions-legales.php">Mentions légales</a><br />

@@ -12,13 +12,12 @@ $gestionClient = new GestionClient();
 $client = $gestionClient->selectAvecEmailEtPassword($email,$password);
 
 if ($client != null  ) {
-    if(password_verify($password, $client->password)){
 
-        $_SESSION['id'] = $client->id;
-        $_SESSION['nom'] = $client->nom;
-        $_SESSION['prenom'] = $client->prenom;
+    $_SESSION['id'] = $client->id;
+    $_SESSION['nom'] = $client->nom;
+    $_SESSION['prenom'] = $client->prenom;
 
-    }
+    
 
     
     // Redirection vers la page d'accueil

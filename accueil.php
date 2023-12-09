@@ -34,27 +34,25 @@
     <section class="accueil">
 
         <div class="slide active" style="background: url(images/lunettes-enfants.jpg) no-repeat;">
-            <div class="content"
-                style="padding: 20px; background:  linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size:1.5em; border-radius:8px;">
-                <h1>Chez Abir Optic,</h1>
-                <h2>Lunettes de vue et de soleil stylées</h2>
+            <div class="content">
+               
+                <h2>Chez Abir Optic, Lunettes de vue et de soleil stylées</h2>
                 
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
-        <div class="slide" style="background: url(images/LOGO-OPTIC1.png) no-repeat;">
-            <div class="content"
-                style="padding: 20px; background:  linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size: 1.5em; border-radius:8px;  ">
-                <h2>CHEZ ABIR OPTIC,<br>La qualité rencontre la mode,<br> et la clarté de la vision est notre priorité.</h2>
+        <div class="slide" style="background: url(images/39.jpg) no-repeat;">
+            <div class="content">
+                <h2>Chez Abir Optic, La qualité rencontre la mode, et la clarté de la vision est notre priorité.</h2>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
         </div>
 
         <div class="slide" style="background: url(images/OPTIC-WELCOME.jpg) no-repeat; ">
             <div class="content"
-                style="padding: 20px; background: linear-gradient(to right, #8ecae6, #fff); color: #023047; font-size: 1.5em; border-radius:8px;">
-                <h2>ABIR OPTIC, <br>vous propose un large choix de lunette de vue,<br>et lunettes de soleil tendance au meilleur prix !
+                >
+                <h2>Abir Optic, vous propose un large choix de lunette de vue, et lunettes de soleil tendance au meilleur prix !
                 </h2>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
             </div>
@@ -64,27 +62,30 @@
         <div id="prev-slide" onclick="prev()" class="fas fa-angle-left"></div>
 
     </section>
-    
-    <section class="center-section">
+    <section class="slogan" >
+        <div class="slogan-content">
+            <div class="slogan-text">
+               <h2 class="slogan-title">Votre vision<img src="images/vision-partagee.png" alt="vision" width="50" hight="50"> notre passion<img src="images/aimer.png" alt="passion"  width="50" hight="50"></h2>
+               <p class="slogan-description">Abir Optic, là où votre vision devient notre passion. Nous sommes dévoués à créer une expérience optique inégalée,
+                 chaque monture étant le reflet de notre engagement envers votre confort visuel. Parce que votre clarté visuelle est notre moteur,
+                  nous nous efforçons de vous offrir la meilleure vision possible, avec passion et détermination.
+                 Notre engagement envers l'excellence et l'innovation guide chacun de nos choix,
+                  pour vous fournir des solutions optiques à la hauteur de vos attentes.</p>
+                  <a href="qui-sommes-nous.php" class="btn-slogan">En savoir plus</a>
+
+            </div>
+           
+        </div>
+    </section>
+    <section class="center-section" >
         <h2 class=" title" style="margin-bottom: 0px;"> Nos promotions </h2>
     </section>
 
-    <section class="banner">
+    <section class="banner" >
         <?php  include('php-composants/accueil-top-3-produits.php'); ?>
     </section>
 
-    <section class="slogan">
-        <div class="slogan-content">
-            <div class="slogan-text">
-               <h2 class="slogan-title">Votre vision, notre passion.</h2>
-               <p class="slogan-description">Chez Abir Optic, nous nous engageons à transformer votre vision en une expérience unique. Notre dévouement pour offrir des solutions optiques exceptionnelles se reflète dans chaque détail, car pour nous, votre clarté visuelle est une priorité absolue.</p>
-
-            </div>
-            <div class="slogan-image">
-                <img src="images/test.jpg" alt="lunettes tendances femmes hommes">
-            </div>
-        </div>
-    </section>
+   
 
     <section class="center-section">
         <h2 class=" title" style="margin-bottom: 0px;"> Nos services </h2>
@@ -92,9 +93,9 @@
     <section class="qui-sommes-nous">
         <div class="icons-container">
 
-            <div class="icons">
+            <div class="icons" onclick="afficherDescription()">
                 <img src="images/icon-1.png" alt="">
-                <h3>Examen de la vue professionnelle</h3>
+                <h3>Examen de la vue pro</h3>
                 <div class="description">
                     <p>Chez Abir Optic, nos examens de vue précis et personnalisés garantissent 
                         des corrections optiques adaptées à chaque individu. Grâce à nos technologies avancées,
@@ -105,7 +106,7 @@
             </div>
 
 
-            <div class="icons">
+            <div class="icons" onclick="afficherDescription()">
                 <img src="images/444.png" alt="">
                 <h3>Cash en Dilevery</h3>
                 <div class="description">
@@ -116,9 +117,9 @@
                 </div>
             </div>
 
-            <div class="icons">
+            <div class="icons" onclick="afficherDescription()">
                 <img src="images/icon-5.png" alt="">
-                <h3>1 Ans de Garantie montures et verres</h3>
+                <h3>1 Ans de Garantie </h3>
                 <div class="description">
                     <p>Chez Abir Optic, nous garantissons la qualité de nos produits avec une garantie d'un an.
                          Votre satisfaction et la durabilité de vos lunettes sont notre priorité,
@@ -126,7 +127,7 @@
                 </div>
             </div>
 
-            <div class="icons">
+            <div class="icons" onclick="afficherDescription()">
                 <img src="images/icon-4.png" alt="">
                 <h3>Entretien et Réparation</h3>
                 <div class="description">
@@ -136,7 +137,7 @@
                 </div>
             </div>
 
-            <div class="icons">
+            <div class="icons" onclick="afficherDescription()">
                 <img src="images/icon-3.png" alt="">
                 <h3>Conseils de Mode Optique</h3>
                 <div class="description">

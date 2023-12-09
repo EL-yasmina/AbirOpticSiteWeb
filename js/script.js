@@ -140,7 +140,7 @@ function showSlides(n) {
 
 
 
-
+/*
 
 document.addEventListener("DOMContentLoaded", function() {
     const icons = document.querySelectorAll('.icons');
@@ -155,6 +155,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+*/
 
+
+
+
+function afficherDescription() {
+    let a = document.getElementsByClassName("description");
+    for (let index = 0; index < a.length; index++) {
+        const element = a[index];
+        if(element.style.display == "none" || element.style.display == "")
+            element.style.display = "block";
+        else element.style.display = "none";
+        
+    }
+
+}
 
 
