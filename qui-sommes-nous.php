@@ -85,7 +85,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/33.jpg" alt="lunettes-qualite" width="600" height="400">
+                <img src="images/33.jpg" alt="lunettes-qualite" width="600" height="400" class="img-responsive">
                 </a>
                 <div class="desc">
                     <h3>Prix Concurrentiels: </h3>

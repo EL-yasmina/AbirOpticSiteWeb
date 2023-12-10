@@ -941,6 +941,7 @@ section {
   .header .navbar ul li ul li a {
     padding-left: 4rem;
   }
+ 
 }
 
 @media (max-width: 450px) {
@@ -959,7 +960,9 @@ section {
             flex-flow: column;
   }
 }
-/*# sourceMappingURL=style.css.map */
+
+
+
 
 .solde{
   font-family:'Merriweather', serif;

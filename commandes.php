@@ -7,7 +7,7 @@
     <meta name="description" content="Consultez l'état et l'historique de vos commandes sur Abir Optic. Suivez facilement vos achats de lunettes de soleil et de vue.">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>panier</title>
+    <title>Commande</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
@@ -22,8 +22,8 @@
     ?>
 
     <section class="heading">
-        <h1>Panier d'achat</h1>
-        <p> <a href="accueil.php">accueil</a> >> commandes </p>
+        <h1>Commande</h1>
+        <p> <a href="accueil.php">accueil</a> >> commande</p>
     </section>
     <script>
         document.getElementById("commandes").classList.add('selected-menu');
@@ -41,6 +41,7 @@
 
 
         <?php include('php-composants/commandes-list.php'); ?>
+        <a href="contact.php" class="btn-nousContacter">Nous contacter</a>
 
         
 

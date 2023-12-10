@@ -65,7 +65,7 @@
     <section class="slogan" >
         <div class="slogan-content">
             <div class="slogan-text">
-               <h2 class="slogan-title">Votre vision<img src="images/vision-partagee.png" alt="vision" width="50" hight="50"> notre passion<img src="images/aimer.png" alt="passion"  width="50" hight="50"></h2>
+               <h2 class="slogan-title">Votre vision<img src="images/vision-partagee.png" alt="vision" width="50" hight="50" class="img-responsive"> notre passion<img src="images/aimer.png" alt="passion"  width="50" hight="50" class="img-responsive"></h2>
                <p class="slogan-description">Abir Optic, là où votre vision devient notre passion. Nous sommes dévoués à créer une expérience optique inégalée,
                  chaque monture étant le reflet de notre engagement envers votre confort visuel. Parce que votre clarté visuelle est notre moteur,
                   nous nous efforçons de vous offrir la meilleure vision possible, avec passion et détermination.
@@ -94,7 +94,7 @@
         <div class="icons-container">
 
             <div class="icons" onclick="afficherDescription()">
-                <img src="images/icon-1.png" alt="">
+                <img src="images/icon-1.png" alt="examen-de-vue" class="img-responsive">
                 <h3>Examen de la vue pro</h3>
                 <div class="description">
                     <p>Chez Abir Optic, nos examens de vue précis et personnalisés garantissent 
@@ -107,7 +107,7 @@
 
 
             <div class="icons" onclick="afficherDescription()">
-                <img src="images/444.png" alt="">
+                <img src="images/444.png" alt="cash-en-delivery" class="img-responsive">
                 <h3>Cash en Dilevery</h3>
                 <div class="description">
                     <p>Le service de cash en delivery chez Abir Optic simplifie votre achat.
@@ -118,7 +118,7 @@
             </div>
 
             <div class="icons" onclick="afficherDescription()">
-                <img src="images/icon-5.png" alt="">
+                <img src="images/icon-5.png" alt="garantie" class="img-responsive">
                 <h3>1 Ans de Garantie </h3>
                 <div class="description">
                     <p>Chez Abir Optic, nous garantissons la qualité de nos produits avec une garantie d'un an.
@@ -128,7 +128,7 @@
             </div>
 
             <div class="icons" onclick="afficherDescription()">
-                <img src="images/icon-4.png" alt="">
+                <img src="images/icon-4.png" alt="entretien lunettes" class="img-responsive">
                 <h3>Entretien et Réparation</h3>
                 <div class="description">
                     <p>Abir Optic assure l'entretien et la réparation de vos lunettes avec expertise.
@@ -138,7 +138,7 @@
             </div>
 
             <div class="icons" onclick="afficherDescription()">
-                <img src="images/icon-3.png" alt="">
+                <img src="images/icon-3.png" alt="conseils-mode-optique" class="img-responsive">
                 <h3>Conseils de Mode Optique</h3>
                 <div class="description">
                     <p>Chez Abir Optic, nos conseils en mode optique vous guident vers un choix de lunettes parfaitement
