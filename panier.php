@@ -21,6 +21,9 @@
         include('php-composants/header.php'); 
         $_SESSION['page'] = null;
     ?>
+    <script>
+    document.getElementById("panier").classList.add('selected-menu-panier');
+    </script>
 
     <section class="heading">
         <h1>Panier d'achat</h1>
@@ -61,7 +64,7 @@
         Calendly.initBadgeWidget({
             url: 'https://calendly.com/yasminataif99/30min',
             text: 'Prendre un rendez-vous avec nous',
-            color: '#0069ff',
+            color: '#0367A6',
             textColor: '#ffffff',
             branding: false
         });

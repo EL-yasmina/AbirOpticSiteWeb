@@ -125,7 +125,7 @@
         Calendly.initBadgeWidget({
             url: 'https://calendly.com/yasminataif99/30min',
             text: 'Prendre un rendez-vous avec nous',
-            color: '#0069ff',
+            color: '#0367A6',
             textColor: '#ffffff',
             branding: false
         });

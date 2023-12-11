@@ -13,7 +13,7 @@
             $gestionCommmande->insert(new Commande(null, $idProduit, $idClient, $quantite, '1'));
         }
         $_SESSION['panier'] = [];
-        header("Location: ../panier.php");
+        header("Location: ../panier-merci.php");
     }
     else {
         header("Location: ../login.php");

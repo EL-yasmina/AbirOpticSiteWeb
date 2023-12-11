@@ -12,9 +12,9 @@ if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
     
         if ($produit != null) {
             $imageBase64 = base64_encode($produit->image);
+            //<i class="fas fa-times"></i>
             $listeProduits .= '
             <div class="box">
-                <i class="fas fa-times"></i>
                 <img src="data:image/jpeg;base64,' . $imageBase64 . '" alt="' . $produit->nom . '">
 
                 <div class="content">

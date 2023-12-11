@@ -138,7 +138,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 };
 
-
+// Défilement automatique toutes les 3 secondes
+setInterval(() => {
+    next();
+    plusSlides(1);
+}, 3000);
 
 /*
 
@@ -171,5 +175,9 @@ function afficherDescription() {
     }
 
 }
+
+
+
+
 
 
