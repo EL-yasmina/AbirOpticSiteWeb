@@ -72,7 +72,14 @@
         <h4>Vos droits</h4>
         <p>Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles. Pour exercer ces droits
             ou pour toute question concernant la protection des données, veuillez nous contacter à
-            Contact.Abiroptic@gmail.com.</p>
+            Contact.Abiroptic@gmail.com.
+        </p>
+        <br>
+        <h3>Cookies</h3>
+        <p>Un cookie est un fichier de petite taille enregistrant les informations de navigation d'un ordinateur sur un site web. Ces données facilitent les futures visites sur le site et servent à mesurer la fréquentation, améliorant ainsi l'expérience utilisateur.<br>Dans le cadre de la navigation sur notre site, aucun cookie n'est installé sur l'ordinateur de l'utilisateur, préservant ainsi sa confidentialité et ses données de navigation.</p>
+        <br>
+        <h3>Proprièté intellectuelle</h3>
+        <p>La propriété intellectuelle de ce site repose sur des informations réelles et authentiques concernant le monde de l'optique, complétées par des contenus textuels générés à l'aide de Google Bard, un outil de génération de texte de Google.<br> Les images utilisées dans le carrousel de la page d'accueil sont des ressources libres de droits provenant du site <a href="https://fr.freepik.com/">Freepik</a>. Les autres visuels représentent fidèlement nos produits chez Abir Optic.<br> Les icônes, provenant de <a href="https://www.flaticon.com/">Flaticon</a>,<br> ainsi que les polices de caractères telles que Roboto, Montserrat et Merriweather viennent de <a href="https://fonts.google.com/">Google Fonts</a>.</p>    
 
 
     </section>

@@ -63,7 +63,7 @@
                     <a href="contact.php" class="btn-nousContacter">Nous contacter</a>
             </div>
             <div class="image">
-                <img src="images/37.png" alt="abir-optic" max-height="300px"  >
+                <img src="images/37.png" alt="Boutique d'optique Abir Optic à Nador" max-height="300px"  >
             </div>
         </div>
     </section>
@@ -75,7 +75,7 @@
     <section class="qui-sommes-nous">
         <div class="quisommeNrow">
             <div class="pourquoi-nous">
-                <img src="images/lunettes-enfants.jpg" alt="lunettes-luxe" width="600" height="400">
+                <img src="images/lunettes-enfants.jpg" alt="lunettes de vue de qualité" width="600" height="400">
                 </a>
                 <div class="desc">
                     <h3>Qualité Supérieure:</h3>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/33.jpg" alt="lunettes-qualite" width="600" height="400" class="img-responsive">
+                <img src="images/33.jpg" alt="lunettes de soleil de luxe" width="600" height="400" class="img-responsive">
                 </a>
                 <div class="desc">
                     <h3>Prix Concurrentiels: </h3>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/39.jpg" alt="lunettes-tendances" width="600" height="400">
+                <img src="images/39.jpg" alt="lunettes de soleil homme femme tendances" width="600" height="400">
                 </a>
                 <div class="desc">
                     <h3>Dernières Tendances:</h3>
@@ -105,7 +105,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/GRAND-LUNETTES.jpg" alt="lunettes" width="600" height="400">
+                <img src="images/GRAND-LUNETTES.jpg" alt="lunettes de vue avec clip solaire " width="600" height="400">
                 </a>
                 <div class="desc">
                     <h3>Service Exceptionnel:</h3>

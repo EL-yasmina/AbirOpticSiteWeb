@@ -34,6 +34,7 @@
     <section class="accueil">
 
         <div class="slide active" style="background: url(images/freepic9.png) no-repeat;">
+        
             <div class="content">
 
             <h3>Lunettes de vue <br/>et de soleil stylées</h3>
@@ -42,6 +43,7 @@
         </div>
 
         <div class="slide" style="background: url(images/home-bg-2.png) no-repeat;">
+        
             <div class="content">
                 <h3>la clarté de la vision <br/>est notre priorité.</h3>
                 <a href="produits.php" class="btn acheter-maintenant">Découvrir nos produits</a>
@@ -49,6 +51,7 @@
         </div>
 
         <div class="slide" style="background: url(images/home-bg-3.png) no-repeat; ">
+        
             <div class="content">
                 <h3>Lunettes tendance <br/>prix imbattables !
                 </h3>

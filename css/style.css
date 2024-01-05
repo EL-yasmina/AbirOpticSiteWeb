@@ -291,7 +291,7 @@ section {
   line-height: 5rem;
   font-size: 4rem;
   color: #0077b6;
-  border: 0.2rem solid #95D0E0;
+  border: 0.2rem solid #95C9D7;
   background: #fff;
   border-radius: .5rem;
   cursor: pointer;
@@ -366,7 +366,7 @@ section {
   border-radius: .5rem;
 }
 .banner .box .content .btn:hover{
-  background-color: #95D0E0;
+  background-color: #95C9D7;
   color: white
 }
 
@@ -520,7 +520,7 @@ section {
       
 }
 .btn-nousContacter:hover{
-  background-color: #95D0E0;
+  background-color: #95C9D7;
       color: white;
 }
 .aqui-sommes-nous .row .content {
@@ -653,7 +653,7 @@ section {
   border-radius: 0.5rem;
 }
 .contact .row .btn:hover{
-  background-color: #95D0E0;
+  background-color: #95C9D7;
   color: #0d0d0d;
   font-size:1.5rem;
   font-weight: bold;
@@ -749,7 +749,7 @@ section {
 
 .login-form form .flex a:hover,
 .register-form form .flex a:hover {
-  color: #95D5EE;
+  color: #95C9D7;
 }
 
 .login-form form input[type="submit"],
@@ -760,7 +760,7 @@ section {
 
 .login-form form input[type="submit"]:hover,
 .register-form form input[type="submit"]:hover {
-  background: #95D5EE;
+  background: #95C9D7;
 }
 
 .login-form form .btn,
@@ -893,7 +893,7 @@ section {
   font-size: 2rem;
   color: #0d0d0d;
   
-  background-color: #EBEEF2;
+  background-color: #EBEBEB;
   width: 100%;
   
 }
@@ -1006,9 +1006,9 @@ section {
 }
 
 .acheter-maintenant :hover{
-  background-color: #95D5EE;
+  background-color: #95C9D7;
   color: black;
-  border-color: #95D5EE;
+  border-color: #95C9D7;
 }
 .panel-heading {
   color: #fff !important;
@@ -1045,7 +1045,7 @@ div.pourquoi-nous {
 }
 
 div.pourquoi-nous:hover {
-  border: 2px solid #95D5EE;
+  border: 2px solid #95C9D7;
   transform: scale(1.05);
 }
 

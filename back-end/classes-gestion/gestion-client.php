@@ -15,14 +15,8 @@
                 $data = $result->fetch_assoc();
                 $hashedPasswordFromDb = $data['password'];
                 
-                //$hashedPassword = password_hash("10111999", PASSWORD_DEFAULT); 
-                //echo password_hash("10111999", PASSWORD_DEFAULT)."<br/>";
-
-                //echo $hashedPasswordFromDb ."<br/>";
-                //echo $password."<br/>";
                 if(password_verify($password, $hashedPasswordFromDb)){  //verification de mot de passe haché
 
-                    echo "test"."<br/>";
                     $client = $this->convertToClient($data);
 
                 }

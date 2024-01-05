@@ -29,8 +29,8 @@
     ?>
 
     <section class="heading">
-        <h1>Conditions Générales de Vente </h1>
-        <p> <a href="accueil.php">accueil</a> >> Conditions Générales de Vente (CGV) </p>
+        <h1>Conditions Générales de Vente / Conditions Générales d'Utilisation </h1>
+        <p> <a href="accueil.php">accueil</a> >> CGV / CGU </p>
     </section>
 
 
@@ -92,6 +92,17 @@
             Contact.Abiroptic@gmail.com ou par téléphone au +212 536 351 121.</p>
         <br>
         <p>Nous vous remercions de votre confiance en Abir Optic.</p>
+        <br>
+        <h2>CGU - Abir Optic</h2>
+        <br>
+        <h3>Article 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <br>
+        <h3>Article 2</h3>
+        <p>Turpis egestas integer eget aliquet nibh. Sed viverra ipsum nunc aliquet. Id consectetur purus ut faucibus pulvinar elementum. Euismod in pellentesque massa placerat duis ultricies lacus. Massa ultricies mi quis hendrerit dolor magna eget est. Odio aenean sed adipiscing diam donec. Lacus luctus accumsan tortor posuere ac ut. Ultricies lacus sed turpis tincidunt id aliquet. Aliquet sagittis id consectetur purus ut faucibus. Morbi non arcu risus quis varius quam quisque id diam. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Ut lectus arcu bibendum at varius vel.</p>
+        <br>
+        <h3>Article 3</h3>
+        <p>Morbi tristique senectus et netus. In massa tempor nec feugiat. Mi eget mauris pharetra et ultrices neque ornare aenean euismod. Dictumst vestibulum rhoncus est pellentesque elit. Erat velit scelerisque in dictum non consectetur a. Blandit turpis cursus in hac habitasse. Metus dictum at tempor commodo ullamcorper a lacus. Morbi tincidunt ornare massa eget egestas. Nunc consequat interdum varius sit. Dolor sed viverra ipsum nunc aliquet bibendum. Mollis aliquam ut porttitor leo. Consequat nisl vel pretium lectus quam id leo in.</p>
 
 
     </section>
