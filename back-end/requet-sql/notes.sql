@@ -28,7 +28,7 @@ CREATE TABLE Commande (
     id_produit INT,
     id_client INT,
     quantite INT,
-    status INT,
+    statut INT,
     FOREIGN KEY (id_produit) REFERENCES Produit(id),
     FOREIGN KEY (id_client) REFERENCES Client(id)
 );
@@ -40,7 +40,7 @@ VALUES ('Doe', 'John', 'Homme', 'johndoe@example.com', '123456789', '123 Rue de 
 INSERT INTO Produit (nom, quantite, image, solde, prix)
 VALUES ('Produit A', 100, 'binaire_de_l_image', 0.0, 19.99);
 
-INSERT INTO Commande (date, id_produit, id_client, quantite, status)
+INSERT INTO Commande (date, id_produit, id_client, quantite, statut)
 VALUES ('2023-10-09', 1, 1, 2, 1);
 -- Insertion de données dans la table Client
 INSERT INTO Client (nom, prenom, sexe, email, telephone, adresse, ville, password)
@@ -51,7 +51,7 @@ INSERT INTO Produit (nom, quantite, image, solde, prix)
 VALUES ('Produit B', 75, 'binaire_de_l_image_2', 0.0, 29.99);
 
 -- Insertion de données dans la table Commande
-INSERT INTO Commande (date, id_produit, id_client, quantite, status)
+INSERT INTO Commande (date, id_produit, id_client, quantite, statut)
 VALUES ('2023-10-10', 2, 2, 3, 2);
 
 -- Ajout d'un autre client

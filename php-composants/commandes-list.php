@@ -7,22 +7,22 @@ $commandes = $gestionCommande->selectParClient($_SESSION['id']);
 if ($commandes != null && count($commandes)) {
     $listCommandes = '';
     $dateGroupe = null;
-    $statusGroupe = null;
+    $statutGroupe = null;
     foreach ($commandes as $commande) {
         $produit = $gestionProduit->selectAvecId($commande->id_produit);
         
         if ($produit != null) {
             if($dateGroupe == null) {            
                 $dateGroupe = $commande->date;
-                $statusGroupe = $commande->status;
-                $listCommandes .= recupererTitreCommande($commande->status,$dateGroupe);
+                $statutGroupe = $commande->statut;
+                $listCommandes .= recupererTitreCommande($commande->statut,$dateGroupe);
                 $listCommandes .= '<div class="box-container">';
             }
-            else if($dateGroupe != $commande->date || $statusGroupe != $commande->status ) {
+            else if($dateGroupe != $commande->date || $statutGroupe != $commande->statut ) {
                 $dateGroupe = $commande->date;
-                $statusGroupe = $commande->status;
+                $statutGroupe = $commande->statut;
                 $listCommandes .= '</div>';
-                $listCommandes .=  ('</fieldset> ' . recupererTitreCommande($commande->status,$dateGroupe));
+                $listCommandes .=  ('</fieldset> ' . recupererTitreCommande($commande->statut,$dateGroupe));
                 $listCommandes .= '<div class="box-container">';
             }
             $imageBase64 = base64_encode($produit->image);

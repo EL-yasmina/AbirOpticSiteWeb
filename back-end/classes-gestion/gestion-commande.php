@@ -43,7 +43,7 @@
 
         public function selectParClient($idClient) {
             $this->connexionDb();
-            $sql = "SELECT * FROM commande WHERE id_client = ? ORDER BY date desc, status";
+            $sql = "SELECT * FROM commande WHERE id_client = ? ORDER BY date desc, statut";
 
             $statement = $this->db->prepare($sql);
             $statement->bind_param("i", $idClient);
@@ -65,11 +65,11 @@
         public function insert(Commande $commande) {
             $this->connexionDb();
             $sql = "
-                INSERT INTO commande (date, id_produit, id_client, quantite, status)
+                INSERT INTO commande (date, id_produit, id_client, quantite, statut)
                 VALUES (CURRENT_DATE(), ?, ?, ?, ?)";
 
             $statement = $this->db->prepare($sql);
-            $statement->bind_param("iiis", $commande->id_produit, $commande->id_client, $commande->quantite, $commande->status);  
+            $statement->bind_param("iiis", $commande->id_produit, $commande->id_client, $commande->quantite, $commande->statut);  
             
             $statement->execute();
             
@@ -80,11 +80,11 @@
             $this->connexionDb();
             $sql = "
                 UPDATE commande
-                SET date = ?, id_produit = ?, id_client = ?, quantite = ?, status = ?
+                SET date = ?, id_produit = ?, id_client = ?, quantite = ?, statut = ?
                 WHERE id = ?";
 
             $statement = $this->db->prepare($sql);
-            $statement->bind_param("siiisi", $commande->date, $commande->id_produit, $commande->id_client, $commande->quantite, $commande->status, $commande->id); //"siiisi" indiquent les types de données respectifs (chaîne, entier, entier, entier, chaîne, entier) dans la méthode bind_param(). 
+            $statement->bind_param("siiisi", $commande->date, $commande->id_produit, $commande->id_client, $commande->quantite, $commande->statut, $commande->id); //"siiisi" indiquent les types de données respectifs (chaîne, entier, entier, entier, chaîne, entier) dans la méthode bind_param(). 
             $statement->execute();        
             
             $this->fermerDb();
@@ -96,7 +96,7 @@
                 $data['id_produit'],
                 $data['id_client'],
                 $data['quantite'],
-                $data['status']
+                $data['statut']
             );
         }
     }
