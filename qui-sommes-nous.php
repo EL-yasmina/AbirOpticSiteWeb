@@ -105,12 +105,11 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/GRAND-LUNETTES.jpg" alt="lunettes de vue avec clip solaire " width="600" height="400">
+                <img src="images/42.jpg" alt="lunettes de soleil marron chic et tendance pour les femmes" width="600" height="400">
                 </a>
                 <div class="desc">
                     <h3>Service Exceptionnel:</h3>
-                    <p>Nous engageons à offrir un service exceptionnel, rapide et efficace. Votre confort est notre
-                        priorité, Faites confiance à Abir Optic pour une expérience de qualité.</p>
+                    <p>Nous engageons à offrir un service exceptionnel, rapide et efficace. Votre confort est notre priorité, Faites confiance à Abir Optic pour une expérience de qualité personnalisée.</p>
                 </div>
             </div>
         </div>
