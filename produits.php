@@ -54,7 +54,7 @@
 
     <section class="heading">
         <h1>Nos produits</h1>
-        <p> <a href="accueil.php">accueil</a> >> produits </p>
+        <p> <a href="index.php">accueil</a> >> produits </p>
     </section>
 
     <section class="products">

@@ -26,7 +26,7 @@ if ($client != null  ) {
         $_SESSION['panier'] = [];
         $_SESSION['page'] = null;
     }else {
-        header("Location: ../accueil.php");
+        header("Location: ../index.php");
     }
    
 

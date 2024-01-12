@@ -36,7 +36,7 @@
 
     <section class="heading">
         <h1>nous contacter</h1>
-        <p> <a href="accueil.php">accueil</a> >> contact </p>
+        <p> <a href="index.php">accueil</a> >> contact </p>
     </section>
 
     <section class="contact">

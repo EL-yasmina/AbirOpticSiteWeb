@@ -27,7 +27,7 @@
 
     <section class="heading">
         <h1>Panier d'achat</h1>
-        <p> <a href="accueil.php">accueil</a> >> panier </p>
+        <p> <a href="index.php">accueil</a> >> panier </p>
     </section>
 
     <section class="shopping-cart">

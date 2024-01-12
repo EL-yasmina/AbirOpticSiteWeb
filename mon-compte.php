@@ -28,7 +28,7 @@
     </script>
     <section class="heading">
         <h1>Compte</h1>
-        <p> <a href="accueil.php">accueil</a> >> mon compte </p>
+        <p> <a href="index.php">accueil</a> >> mon compte </p>
     </section>
     <?php             
         $gestionClient = new GestionClient();

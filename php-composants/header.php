@@ -4,13 +4,13 @@
 
 <header class="header">
 
-    <a href="accueil.php" class="logo">
+    <a href="index.php" class="logo">
         <img src="images/logo.png" alt="abiroptic" class="img-logo" >
     </a>
 
     <nav class="navbar">
         <ul>
-            <li><a id="accueil" href="accueil.php">Accueil</a></li>
+            <li><a id="accueil" href="index.php">Accueil</a></li>
             <li><a id="produits" href="produits.php">Produits</a></li>
             <?php
                 if (isset($_SESSION['nom'])) {

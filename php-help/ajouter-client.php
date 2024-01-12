@@ -39,7 +39,7 @@
         $_SESSION['page'] = null;
     }
     else {
-        header("Location: ../accueil.php");
+        header("Location: ../index.php");
     }   
  
 

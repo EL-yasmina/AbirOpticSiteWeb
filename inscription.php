@@ -26,7 +26,7 @@
     </script>
     <section class="heading">
         <h1>Compte</h1>
-        <p> <a href="accueil.php">accueil</a> >> s'inscrire </p>
+        <p> <a href="index.php">accueil</a> >> s'inscrire </p>
     </section>
 
     <section class="register-form">

@@ -29,7 +29,7 @@
 
     <section class="heading">
         <h1>Mentions légales</h1>
-        <p> <a href="accueil.php">accueil</a> >> Mentions légales </p>
+        <p> <a href="index.php">accueil</a> >> Mentions légales </p>
     </section>
 
 

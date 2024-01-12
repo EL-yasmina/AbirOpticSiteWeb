@@ -31,7 +31,7 @@
     </script>
     <section class="heading">
         <h1>compte</h1>
-        <p> <a href="accueil.php">accueil</a> >> se connecter </p>
+        <p> <a href="index.php">accueil</a> >> se connecter </p>
     </section>
 
     <section class="login-form">

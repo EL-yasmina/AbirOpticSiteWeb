@@ -30,7 +30,7 @@
 
     <section class="heading">
         <h1>Conditions Générales de Vente / Conditions Générales d'Utilisation </h1>
-        <p> <a href="accueil.php">accueil</a> >> CGV / CGU </p>
+        <p> <a href="index.php">accueil</a> >> CGV / CGU </p>
     </section>
 
 

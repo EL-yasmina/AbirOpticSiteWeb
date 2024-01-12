@@ -23,7 +23,7 @@
 
     <section class="heading">
         <h1>Commande</h1>
-        <p> <a href="accueil.php">accueil</a> >> commande</p>
+        <p> <a href="index.php">accueil</a> >> commande</p>
     </section>
     <script>
         document.getElementById("commandes").classList.add('selected-menu');

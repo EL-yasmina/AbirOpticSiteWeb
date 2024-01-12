@@ -32,7 +32,7 @@
 
     <section class="heading">
         <h1>Qui sommes-nous</h1>
-        <p> <a href="accueil.php">accueil</a> >> Qui sommes-nous</p>
+        <p> <a href="index.php">accueil</a> >> Qui sommes-nous</p>
     </section>
     <section class="qui-sommes-nous" style="background-color:#EBEEF2">
         <div class="row">
