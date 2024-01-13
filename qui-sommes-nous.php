@@ -6,7 +6,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="description" content="Découvrez Abir Optic: notre passion pour des lunettes de qualité, nos valeurs et services pour une expérience optique exceptionnelle.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="max-age=604800, public">
+    
 
     <title>Qui sommes-nous</title>
 
