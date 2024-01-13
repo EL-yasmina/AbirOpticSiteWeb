@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=604800, public">
+
     <meta name="description"
         content="Lunettes de vue et de soleil tendance pour hommes et femmes chez Abir Optic. Qualité et style réunis.">
 
