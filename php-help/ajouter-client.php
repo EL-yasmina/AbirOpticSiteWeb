@@ -27,7 +27,7 @@
     
     $gestionClient->insert($nouveauClient);
 
-    $client = $gestionClient->selectAvecEmailEtPassword($email);    
+    $client = $gestionClient->selectAvecEmailEtPassword($email,$password);    
 
     $_SESSION['id'] = $client->id;
     $_SESSION['nom'] = $client->nom;
