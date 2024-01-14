@@ -179,8 +179,8 @@
                 <p class="author">- Kawthar HAFSI</p>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
+            <span class="prev" onclick="plusSlides(-1)">❮</span>
+            <span class="next" onclick="plusSlides(1)">❯</span>
 
         </div>
 
