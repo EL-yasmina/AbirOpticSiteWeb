@@ -65,7 +65,7 @@
                     <a href="contact.php" class="btn-nousContacter">Nous contacter</a>
             </div>
             <div class="image">
-                <img src="images/37.png" alt="Boutique d'optique Abir Optic à Nador" max-height="300px"  >
+                <img src="images/37.avif" alt="Boutique d'optique Abir Optic à Nador" max-height="300px"  >
             </div>
         </div>
     </section>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/33.jpg" alt="lunettes de soleil de luxe" width="600" height="400" class="img-responsive">
+                <img src="images/33.avif" alt="lunettes de soleil de luxe" width="600" height="400" class="img-responsive">
                 </a>
                 <div class="desc">
                     <h3>Prix Concurrentiels: </h3>
@@ -97,7 +97,7 @@
             </div>
 
             <div class="pourquoi-nous">
-                <img src="images/39.jpg" alt="lunettes de soleil homme femme tendances" width="600" height="400">
+                <img src="images/39.avif" alt="lunettes de soleil homme femme tendances" width="600" height="400">
                 </a>
                 <div class="desc">
                     <h3>Dernières Tendances:</h3>
