@@ -112,6 +112,7 @@
         });
     }
     </script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -133,13 +134,9 @@
             console.log('FAILED...', error);
             alert("error :" + error)
         });
-    }
-    </script>
-
+    }</script>
     <script>
-    (function() {
-        emailjs.init("R6G3VN3HDr3ig-NUC");
-    })();
+    (function() {emailjs.init("R6G3VN3HDr3ig-NUC");})();
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault();
         var form = this;

@@ -43,9 +43,9 @@
         <p>Email: contact.abiroptic@gmail.com</p>
         <br>
         <h3>Hébergement</h3>
-        <p>Lorem ipsum dolor </p>
-        <p>Lorem ipsum dolor </p>
-        <p>Lorem ipsum dolor</p>
+        <p>Le site est hebergé par la société HOSTINGER</p>
+        <p>61 Rue Lordou Vironos 6023 Larnaca Chypre </p>
+        <a href="https://www.hostinger.fr">https://www.hostinger.fr</a>
         <br>
         <h3>Confidentialité et Données Personnelles</h3>
         <p>Abir Optic attache une grande importance à la protection de vos données personnelles. Nous nous engageons à

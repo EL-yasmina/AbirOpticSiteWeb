@@ -1,8 +1,6 @@
 <?php
     class GestionClient extends BaseDeDonnees {
     
-   
-   
         public function selectAvecEmailEtPassword($email, $password) {
             $this->connexionDb();
             $sql = "SELECT * FROM client WHERE email = ?";

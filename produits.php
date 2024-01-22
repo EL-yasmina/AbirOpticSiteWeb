@@ -66,19 +66,7 @@
 
     <?php include('php-composants/footer.php'); ?>
 
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script type="text/javascript">
-    window.onload = function() {
-        Calendly.initBadgeWidget({
-            url: 'https://calendly.com/yasminataif99/30min',
-            text: 'Prendre un rendez-vous avec nous',
-            color: '#0367A6',
-            textColor: '#ffffff',
-            branding: false
-        });
-    }
-    </script>
+
 
 </body>
 
