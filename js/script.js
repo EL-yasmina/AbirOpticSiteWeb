@@ -11,12 +11,16 @@ let slides = document.querySelectorAll('.accueil .slide');
 let index = 0;
 
 function next() {
+    if(slides.length == 0)
+        return;
     slides[index].classList.remove('active');
     index = (index + 1) % slides.length;
     slides[index].classList.add('active');
 }
 
 function prev() {
+    if(slides.length == 0)
+        return;
     slides[index].classList.remove('active');
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
@@ -125,6 +129,8 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
+  if(slides.length == 0)
+    return;
   var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
