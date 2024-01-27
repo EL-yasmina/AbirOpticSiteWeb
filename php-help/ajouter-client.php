@@ -12,9 +12,7 @@
     $email = $_POST['email'];
     $password = $_POST['mot_de_passe'];
     
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT); //hachage de mot de passe
-
-    $nouveauClient = new Client(0, $nom, $prenom, $sexe, $email, $telephone, $adresse, $ville, $passwordHash);
+    $nouveauClient = new Client(0, $nom, $prenom, $sexe, $email, $telephone, $adresse, $ville, $password);
     $gestionClient = new GestionClient();
 
     $clientExistant = $gestionClient->emailExist($email);

@@ -4,8 +4,8 @@ include('session.php');
 
 include('../back-end/back-end.php');
 
-// $email = $_POST['email'];
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL); //fonction:'filter_input pour netoyer les valeurs et prévenir les attaques par injection 
+$email = $_POST['email'];
+//$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL); //fonction:'filter_input pour netoyer les valeurs et prévenir les attaques par injection 
 $password = $_POST['password'];
 
 $gestionClient = new GestionClient();

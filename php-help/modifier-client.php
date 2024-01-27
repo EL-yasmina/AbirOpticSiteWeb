@@ -21,7 +21,7 @@
     
     // Vérification et hachage du nouveau mot de passe s'il est défini et confirmé
     if (!empty(trim($password)) && $password === $_POST['confirmer_new_mot_de_passe']) {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $hashedPassword = $password;
     } elseif (empty(trim($password))) {
         $hashedPassword = $client->password; // Conserve le mot de passe actuel s'il est vide
     } else {

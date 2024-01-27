@@ -7,15 +7,15 @@
             $statement = $this->db->prepare($sql);
             $statement->bind_param("s", $email);  //"s" pour indiquer que ce sont des chaînes de caractères , bind_param() methode qui lie la valeur de l'email aux param de la requete:
             $statement->execute();
-
+            
             $result = $statement->get_result();
             $client = null;
 
             if ($result->num_rows > 0) {
                 $data = $result->fetch_assoc();
                 $hashedPasswordFromDb = $data['password'];
-                
-                if(password_verify($password, $hashedPasswordFromDb)){  //verification de mot de passe haché
+
+                if(password_verify($password, $hashedPasswordFromDb) === true){  //verification de mot de passe haché
 
                     $client = $this->convertToClient($data);
 
@@ -139,8 +139,7 @@
                 $data['telephone'],
                 $data['adresse'],
                 $data['ville'],
-                password_hash($data['password'], PASSWORD_DEFAULT)
-                // $data['password']
+                $data['password']
             );
         }
 

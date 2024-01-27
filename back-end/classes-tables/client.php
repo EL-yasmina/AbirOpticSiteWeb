@@ -18,9 +18,7 @@
             $this->telephone = $telephone;
             $this->adresse = $adresse;
             $this->ville = $ville;
-            // $this->password = $password;
-
-            $this->password = password_hash($password, PASSWORD_DEFAULT);
+            $this->password = $password;
         }
     }
 ?>
