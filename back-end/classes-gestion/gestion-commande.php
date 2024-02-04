@@ -22,7 +22,7 @@
         }
         public function selectTop9() {
             $this->connexionDb();
-            $query = "SELECT commande.id, commande.date, commande.quantite, commande.statut, produit.nom AS nomProduit, client.nom AS nomClient, commande.id_produit, commande.id_client FROM commande INNER JOIN client ON client.id = commande.id_client INNER JOIN produit ON produit.id = commande.id_produit ORDER BY commande.id DESC LIMIT 9";
+            $query = "SELECT commande.id, commande.date, commande.quantite, commande.statut, produit.nom AS nomProduit, client.nom AS nomClient FROM commande INNER JOIN client ON client.id = commande.id_client INNER JOIN produit ON produit.id = commande.id_produit ORDER BY commande.id DESC LIMIT 9";
         
             $statement = $this->db->prepare($query);
             $statement->execute();
