@@ -16,22 +16,18 @@ if ($client != null  ) {
     $_SESSION['id'] = $client->id;
     $_SESSION['nom'] = $client->nom;
     $_SESSION['prenom'] = $client->prenom;
-
-    
-
     
     // Redirection vers la page d'accueil
-    if (isset($_SESSION['page']) && $_SESSION['page'] === 'panier.php') {     
+    if (isset($_SESSION['page']) && $_SESSION['page'] === 'panier.php') { // cas de commande
         header("Location: ../panier.php");
-        $_SESSION['panier'] = [];
         $_SESSION['page'] = null;
-    }else {
+    }else { // cas de connexion normal
         header("Location: ../index.php");
     }
    
 
 } else {
-    // Authentification échouée, rediriger vers la page de connexion avec un message d'erreur
+    // connexion échouée, rediriger vers la page de connexion
     header("Location: ../login.php?erreur=identifiants_incorrect");
 }
  

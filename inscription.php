@@ -98,7 +98,19 @@
 
     </section>
 
+    <script>
+        const searchParams = window.location.search;
+        const url = window.location.href;
+        if (searchParams.includes('erreur=email_existe')) {
+            alertify.alert("Alert", "Email déjà existant !")
+            .setting({
+                'label': 'Ok',
+                'closable': false
+            });
+        }
+    </script>
     <?php include('php-composants/footer.php'); ?>
+
 
 </body>
 
