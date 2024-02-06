@@ -29,7 +29,7 @@
         
             $result = $statement->get_result();
         
-            // Utilisez fetch_all pour récupérer tous les résultats sous forme de tableau d'objets
+            // fetch_all pour récupérer tous les résultats sous forme de tableau d'objets
             $data = $result->fetch_all(MYSQLI_ASSOC);
         
             $this->fermerDb();
